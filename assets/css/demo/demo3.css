@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* Clients style 1 modifications */
+.clients-1 {
+    background: #111111;
+}
+
+/* Content Block style 1 modifications */
+.content-block-1 {
+    background: #333333 url(http://placehold.it/1600x1067/333333/555555?text=background+1600x1067)
+}
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .content-block-1 {
+        /* here goes high resolution background */        
+        background: #333333 url(http://placehold.it/1600x1067/333333/555555?text=background+1600x1067)
+    }
+}
+.content-block-1 p {
+    color: #CCCCCC
+}
+
+/* Content Block style 3 modifications */
+.content-block-3 {
+    background: #333333
+}
+.content-block-3 p {
+    color: #CCCCCC
+}
+.content-block-3 img {
+    margin-bottom: -150px
+}
+
+/* Content Block style 11 modifications */
+.content-block-11 {
+    background: #333333 url(http://placehold.it/1600x1067/333333/555555)
+}
+
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .content-block-11 {
+        background: #333333 url(http://placehold.it/1600x1067/333333/555555)
+    }
+}
+.content-block-11 .main-icon,
+.content-block-11 .subh-basic-light {
+    color: #FFFFFF;
+}
+.content-block-11 p {
+    color: #CCCCCC
+}
+
+/* Price style 1 modifications */
+.price-1 {
+    background: #222222
+}
+.price-1 .price-table {
+    border-radius: 17px;
+}
+.price-1 .price-table.primary .price {
+    color: #111111
+}
+.price-1 .price-table.primary {
+    box-shadow: 0px 20px 40px #111111
+}

@@ -1,0 +1,128 @@
+/* Scroll-Bar Handle */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(133, 108, 212, 1);
+}
+
+/* Hero Header style 4 modifications */
+.hero-header-4 {
+    background: rgba(17, 17, 17, 0.7);
+}
+.hero-header-4 .play-button {
+    color: #FFFFFF;
+    font-size: 60px;
+    margin-top: 0px;
+}
+.hero-header-4 h2 span {
+    color: #bdaaf8;
+    border-bottom: solid 1px #bdaaf8
+}
+.hero-header-4 .bttn {
+    background: #f671ac;
+    background: -webkit-linear-gradient(135deg, #f671ac, #856cd4);
+    background: linear-gradient(135deg, #f671ac, #856cd4);
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+/* Content Block 1 modifications */
+.content-block-1 {
+    background: #222222
+}
+.content-block-1 .icon {
+    color: #bdaaf8;
+    font-size: 60px;
+    display: block;
+    margin-bottom: 20px;
+}
+.content-block-1 p {
+    color: #999999
+}
+
+/* Portfolio style 1 modifications */
+#portfolio-1 {
+    background: #111111
+}
+.grid-img:after {
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+.grid-item:hover .grid-img:after {
+    opacity: 0
+}
+@media only screen and (min-width: 992px) {
+    .grid figure:hover img {
+        opacity: 1;
+    }
+}
+.grid-type-1 figcaption .project {
+    color: #CCCCCC;
+    text-align: left;
+}
+.grid-type-1 figure:hover .project {
+    color: #FFFFFF;
+}
+.grid-type-1 figcaption .company {
+    text-align: left;
+}
+#portfolio-1 .subh-basic-light {
+    font-size: 18px
+}
+
+/* Testimonial style 4 modifications */
+.testimonial-4 {
+    background: #222222
+}
+.testimonial-4 h4 {
+    color: #FFFFFF;
+}
+.testimonial-4 h4 span {
+    color: #bfadf9;
+}
+.testimonial-4 .client-box {
+    background: #111111;
+    border: solid 1px #222222;
+    box-shadow: none;
+}
+.testimonial-4 .author {
+    background: #333333;
+    border-bottom: solid 1px #111111;
+}
+.testimonial-4 .name {
+    color: #CCCCCC;
+}
+.testimonial-4 .company {
+    color: #CCCCCC;
+}
+.testimonial-4 p.quote {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    color: #CCCCCC
+}
+@media only screen and (min-width: 991px) {
+    .testimonial-4 .client-box:hover {
+        box-shadow: none
+    }
+}
+
+/* Contact style 1 modifications */
+.contact-1 {
+    background: #444444 url(http://placehold.it/1600x1067/444444/777777?text=background+1600x1067);
+}
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .contact-1 {
+        background: #444444 url(http://placehold.it/1600x1067/444444/777777?text=background+1600x1067);
+    }
+}
+.contact-1 h3 span {
+    color: #bfadf9
+}
+.contact-1 hr {
+    border-top-color: #856cd4
+}
+.contact-1 .social a {
+    border-color: #856cd4
+}

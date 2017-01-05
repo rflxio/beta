@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* Content Block Style 11 modifications */
+.content-block-11 {
+    background: #9C27B0;
+    background: -webkit-linear-gradient(45deg, #9C27B0, #64B5F6);
+    background: linear-gradient(45deg, #9C27B0, #64B5F6);
+}
+.content-block-11 p {
+    color: #EEEEEE
+}
+.content-block-11 .subh-basic-light {
+    color: #FFFFFF;
+}
+
+/* Sample Content Section */
+.content-section-1 {
+    background: #FFFFFF
+}
+
+/* Quote Style 4 modifications */
+.quote-4 {
+    border-radius: 5px;
+}

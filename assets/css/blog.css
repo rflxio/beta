@@ -1,0 +1,595 @@
+@charset "utf-8";
+/* ----------------------------------
+Name: blog.css
+Version: 1.2 - blog stylesheet
+
+01. Blog Card
+02. Blog Small Cards
+03. Blog Sidebar Part
+04. Blog Single Column
+05. Blog Single Page
+ ---------------------------------- */
+
+.page-title-modern {
+    min-height: 100px;
+    background: #F8F8F8;
+    border-bottom: none;
+    padding: 120px 0px 60px;
+}
+@media only screen and (max-width: 767px) {
+    .page-title-modern {
+        padding: 80px 0px 30px 0px
+    }
+}
+
+/* ---------------------------------
+01. Blog Cards
+ ---------------------------------*/
+.blog-card {
+    background: #F8F8F8
+}
+@media only screen and (max-width: 767px) {
+    .blog-card .col-xs-12 {
+        padding: 0px;
+    }
+}
+.blog-card article {
+    margin-bottom: 50px;
+}
+.blog-card .blog-post {
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.blog-card .blog-post:hover {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.blog-card .blog-post:before,
+.blog-card .blog-post:after {
+    display: table;
+    content: " ";
+}
+.blog-card .blog-post:after {
+    clear: both;
+}
+.blog-card .blog-img {
+    min-height: 300px;
+    padding: 0;
+    overflow: hidden;
+}
+.blog-card .blog-content {
+    background: #FFFFFF;
+    padding: 50px;
+}
+@media only screen and (max-width: 1200px) {
+    .blog-card .blog-content {
+        padding: 30px;
+    }
+}
+.blog-card .blog-content .subh-basic-dark {
+    color: #999999;
+    margin-bottom: 30px;
+}
+.blog-card .blog-content h5 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.blog-card .blog-post:hover h5 {
+    color: #2e71f2
+}
+.blog-card .blog-content p {
+    border-bottom: solid 1px #EEEEEE;
+    padding-bottom: 30px;
+    color: #888888
+}
+.blog-card .blog-content .article-by {
+    display: inline-block;
+    font-size: 12px;
+    color: #999999
+}
+.blog-card .blog-content .article-by .author {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #555555
+}
+
+/* ---------------------------------
+02. Blog Cards Small
+ ---------------------------------*/
+.blog-card-small {
+    background: #F8F8F8
+}
+.blog-card-small .blog-wrapper {
+    width: 100%;
+}
+.blog-card-small .blog-post {
+    background: #FFFFFF;
+    min-height: 100px;
+    margin-bottom: 30px;
+    padding: 0;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.blog-card-small .blog-post:hover {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.blog-card-small .blog-img {
+    overflow: hidden;
+    position: relative
+}
+.blog-card-small .blog-img:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(46, 113, 242, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s
+}
+.blog-card-small .blog-post:hover .blog-img:after {
+    opacity: 1
+}
+.blog-card-small .blog-img img {
+    width: 100%;
+    vertical-align: top;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease
+}
+@media only screen and (min-width: 992px) {
+    .blog-card-small .blog-post:hover .blog-img img {
+        -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+}
+.blog-card-small .blog-content {
+    background: #FFFFFF;
+    padding: 30px;
+}
+.blog-card-small .blog-content .subh-basic-dark {
+    font-size: 11px !important;
+    color: #999999;
+    margin-bottom: 20px;
+}
+.blog-card-small .blog-content h6 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-bottom: solid 1px #EEEEEE;
+    padding-bottom: 20px;
+}
+.blog-card-small .blog-post:hover h6 {
+    color: #2e71f2
+}
+.blog-card-small .blog-content .article-by {
+    display: inline-block;
+    font-size: 12px;
+    color: #999999
+}
+.blog-card-small .blog-content .article-by .author {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #555555
+}
+
+/* ---------------------------------
+03. Blog Sidebar Part
+ ---------------------------------*/
+.blog-search {
+    border-bottom: solid 1px #DDDDDD;
+    padding-bottom: 20px;
+}
+.blog-search .subh-basic-dark {
+    color: #888888;
+    font-size: 12px !important;
+}
+.blog-search input {
+    padding: 10px 10px 10px 40px;
+    margin-top: 10px;
+    border-radius: 75px;
+    background: #EEEEEE;
+    border-color: #F8F8F8
+}
+.blog-search input:focus {
+    background: #FFFFFF;
+    border-color: #EEEEEE
+}
+.search-form i {
+    color: #999999;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.blog-popular {
+    padding: 30px 0px;
+    border-bottom: solid 1px #DDDDDD
+}
+.blog-popular .subh-basic-dark {
+    color: #888888;
+    font-size: 12px !important;
+}
+.popular-post {
+    margin-top: 10px;
+}
+.popular-post a {
+    display: block;
+}
+.popular-post .pop-img {
+    width: 25%;
+    display: inline-block;
+    float: left;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.popular-post .pop-title {
+    display: inline-block;
+    width: 75%;
+    float: left;
+}
+.popular-post .pop-title h6 {
+    font-size: 14px !important;
+    padding-left: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #444444
+}
+.popular-post:hover .pop-img {
+    opacity: 0.7;
+}
+.popular-post:hover .pop-title h6 {
+    color: #2e71f2
+}
+@media only screen and (max-width: 1200px) {
+    .popular-post {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .popular-post .pop-img {
+        width: 50%;
+        float: none;
+    }
+    .popular-post .pop-title {
+        width: 100%;
+        float: none;
+    }
+    .popular-post .pop-title h6 {
+        padding-left: 0px;
+    }
+}
+.blog-tags {
+    padding: 30px 0px;
+    border-bottom: solid 1px #DDDDDD
+}
+.blog-tags .subh-basic-dark {
+    color: #888888;
+    font-size: 12px !important;
+}
+.blog-tags ul li {
+    display: inline-block;
+}
+.blog-tags ul {
+    margin-top: 5px;
+}
+.blog-tags a {
+    display: inline-block;
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #555555;
+    border: solid 1px #CCCCCC;
+    padding: 4px 10px;
+    margin: 5px 5px 5px 0px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.blog-tags a:hover {
+    color: #111111;
+    border: solid 1px #111111;
+}
+.blog-about {
+    padding: 30px 0px;
+}
+.blog-about .subh-basic-dark {
+    color: #888888;
+    font-size: 12px !important;
+}
+.blog-about p {
+    margin-top: 10px;
+    color: #888888
+}
+
+/* ---------------------------------
+04. Blog Single Column
+ ---------------------------------*/
+.blog-single {
+    background: #F8F8F8
+}
+.blog-single .blog-wrapper {
+    padding: 0;
+}
+.blog-single article {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.blog-single .blog-img {
+    overflow: hidden;
+    position: relative
+}
+.blog-single .blog-img:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(46, 113, 242, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s
+}
+.blog-single .blog-img:hover:after {
+    opacity: 1
+}
+.blog-single .blog-img img {
+    width: 100%;
+    vertical-align: top;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease
+}
+@media only screen and (min-width: 992px) {
+    .blog-single .blog-img:hover img {
+        -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+}
+.blog-single .blog-post h5 {
+    font-weight: 600;
+    margin: 20px 0 7px;
+    padding-bottom: 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    display: inline;
+    line-height: 1.3em;
+    border-bottom: solid 1px #F8F8F8;
+}
+.blog-single .blog-post h5:hover {
+    color: #555555;
+    border-bottom: solid 1px #999999;
+}
+.blog-single .blog-post h5:after,
+.blog-single .blog-post h5:before {
+    content: "";
+    display: block;
+    margin: 15px 0;
+}
+.blog-single .article-by {
+    display: block;
+    font-size: 12px;
+    color: #999999
+}
+.blog-single .article-by .author {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #555555
+}
+.blog-single p {
+    margin-top: 20px;
+}
+.blog-single .bttn {
+    border: solid 2px #DDDDDD;
+    margin-top: 20px;
+    color: #111111;
+    border-radius: 5px;
+}
+.blog-single .bttn:hover {
+    background: #DDDDDD;
+}
+@media only screen and (max-width: 480px) {
+    .blog-single-sidebar {
+        padding: 0
+    }
+}
+
+/* ---------------------------------
+05. Blog Single Page
+ ---------------------------------*/
+.blog-single-page-title {
+    background: #111111 url(http://placehold.it/1600x1067/111111/111111?text=background+1600x1067);
+}
+.blog-single-page-title p {
+    margin-top: 20px;
+}
+.blog-single-page-title .article-by {
+    margin-top: 20px;
+    display: block;
+    font-size: 13px;
+    color: #CCCCCC
+}
+.blog-single-page-title .article-by .author {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF
+}
+.blog-single-page h6 {
+    font-size: 19px !important;
+    font-weight: 600;
+    margin: 30px 0px;
+}
+.blog-single-page p {
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+.blog-single-page blockquote {
+    font-family: 'PT Serif', 'Segoe UI', 'Helvetica Neue', serif;
+    font-style: italic;
+    font-size: 20px;
+    margin: 50px 0px;
+    border: solid 1px #DDDDDD;
+    border-radius: 3px;
+}
+.firstcharacter {
+    float: left;
+    color: #2e71f2;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: Georgia;
+}
+.blog-single-page .pagination {
+    margin-top: 50px;
+}
+.blog-single-page .pagination a {
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #111111
+}
+.blog-comment {
+    background: #F8F8F8
+}
+.blog-comment .social-share {
+    margin-top: 20px
+}
+.blog-comment .social-share a {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 22px;
+    border-radius: 25px;
+    margin: 5px;
+    color: #FFFFFF;
+    -webkit-transition: all 0.05s ease-in-out;
+    transition: all 0.05s ease-in-out
+}
+.blog-comment .social-share a span {
+    margin-right: 10px
+}
+.blog-comment .social-share a.facebook {
+    background: #3b5998
+}
+.blog-comment .social-share a.twitter {
+    background: #55acee
+}
+.blog-comment .social-share a.gplus {
+    background: #dc4e41
+}
+@media only screen and (max-width: 540px) {
+    .blog-comment .social-share a {
+        margin-bottom: 10px;
+        margin-left: 0;
+        width: 100%;
+        display: block;
+        text-align: center
+    }
+}
+.comments-section {
+    margin-top: 20px;
+    padding: 20px 0px;
+    width: 100%;
+    border-top: solid 1px #DDDDDD
+}
+.comments-count {
+    display: block;
+    font-family: 'Hind Madurai', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+.comment {
+    padding: 20px 0px 10px;
+    border-bottom: solid 1px #DDDDDD;
+}
+.comment .comment-img {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+.comment .comment-text {
+    display: inline-block;
+    width: 80%;
+    float: left;
+}
+.comment .comment-text h5 {
+    font-weight: 600;
+    font-size: 19px !important;
+    margin-bottom: 3px;
+}
+.comment .comment-text em {
+    font-size: 14px;
+    color: #999999
+}
+.comment .comment-text p {
+    margin-top: 7px;
+    color: #666666
+}
+.comments-section ul ul li .comment {
+    margin-left: 20%
+}
+@media only screen and (max-width: 540px) {
+    .comment .comment-text p {
+        font-size: 14px;
+    }
+    .comments-section ul ul li .comment {
+        margin-left: 10%
+    }
+}
+.comment-form input,
+.comment-form textarea {
+    padding: 15px;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.comment-form input:focus,
+.comment-form textarea:focus {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}

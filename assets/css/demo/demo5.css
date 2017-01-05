@@ -1,0 +1,35 @@
+#googleMap {
+    margin-top: 0;
+    z-index: 1;
+    position: relative;
+}
+
+/* Clients style 3 modifications */
+.clients-3 .subh-basic-dark {
+    color: #FFFFFF
+}
+.clients-3 {
+    background: #9D50BB;
+    /* fallback for old browsers */    
+    background: -webkit-linear-gradient(to left, #9D50BB, #6E48AA);
+    background: linear-gradient(to left, #9D50BB, #6E48AA);
+}
+.clients-3 ul li {
+    border: dotted 1px #6E48AA;
+}
+
+/* Team style 1 modifications */
+.team-1 {
+    background: #111111
+}
+
+/* Testimonial style 1 modifications */
+.testimonial-1 {
+    background: #9D50BB;
+    /* fallback for old browsers */    
+    background: -webkit-linear-gradient(to left, #9D50BB, #6E48AA);
+    background: linear-gradient(to left, #9D50BB, #6E48AA);
+}
+.testimonial-1 .position {
+    color: #CCCCCC
+}

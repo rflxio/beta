@@ -1,0 +1,71 @@
+/* Scroll-Bar Handle */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(17, 17, 17, 1);
+    background: -webkit-linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    background: linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+}
+
+/* Hero Header style 7 modifications */
+.hero-header-7 {
+    background: #EEEEEE url(http://placehold.it/1600x1067/EEEEEE/CCCCCC?text=background+1600x1067);
+}
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .hero-header-7 {
+        background: #EEEEEE url(http://placehold.it/1600x1067/EEEEEE/CCCCCC?text=background+1600x1067);
+    }
+}
+.hero-header-7 h3,
+.content-block-14 h3,
+.content-block-12 h3,
+.promo-2 h5 {
+    color: #9C27B0;
+    background: -webkit-linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    background: linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100%;
+}
+
+/* Content Block style 12 modifications */
+.content-block-12 .icon {
+    color: #F44336
+}
+.content-block-12 .feature:hover .icon {
+    background: #F44336;
+    border-color: #F44336;
+}
+.hero-header-7 .bttn,
+.content-block-14 .bttn,
+.promo-2 .bttn {
+    background: #9C27B0;
+    background: -webkit-linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    background: linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    color: #FFFFFF;
+    border: none;
+}
+
+/* Hero Header style 7 modifications */
+.hero-header-7 h5 {
+    color: #888888
+}
+
+/* Testimonial style 2 modifications */
+.content-block-14,
+.team-4,
+.promo-2,
+.testimonial-2 .all-testimonials .item {
+    background: #fdebe9
+}
+.testimonial-2 h4,
+.testimonial-2 .name {
+    color: #F44336;
+}
+.testimonial-2 .owl-controls .owl-page.active span,
+.testimonial-2 .owl-controls.clickable .owl-page:hover span {
+    background: #F44336 !important;
+}

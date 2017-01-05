@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* Content Block style 12 modifications */
+.content-block-12 {
+    background: #111111
+}
+.content-block-12 p {
+    color: #999999
+}
+.content-block-12 .icon {
+    background: #111111;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 0px #111111;
+    border: solid 2px #856cd4;
+    border-radius: 0px;
+}
+.content-block-12 .feature:hover .icon {
+    background: #856cd4;
+    border: solid 2px #856cd4;
+    color: #FFFFFF;
+    box-shadow: 0px 30px 20px #111111
+}
+.content-block-12 .subh-basic-dark {
+    color: #FFFFFF
+}
+
+/* Price style 2 modifications */
+.price-2 {
+    background: #222222
+}
+.price-2 .subtext {
+    color: #CCCCCC
+}
+.price-2 .table-wrapper,
+.price-2 .table-wrapper.primary {
+    border: solid 1px #444444;
+    background: #111111
+}
+.price-2 .table-first,
+.price-2 .table-last {
+    border-radius: 0px
+}
+.price-2 .price {
+    color: #FFFFFF
+}
+.price-2 .plan,
+.price-2 .table-wrapper.primary .plan {
+    color: #CCCCCC;
+}
+.price-2 .features {
+    border-top: solid 1px #444444;
+}
+.price-2 .features li {
+    color: #FFFFFF
+}
+.price-2 .features li span {
+    color: #7FE393;
+}
+.price-2 .table-wrapper.primary .bttn {
+    border: solid 2px #f671ac;
+    background: #f671ac;
+    color: #FFFFFF
+}
+.price-2 .bttn {
+    background: #64d360;
+    border: solid 2px #64d360;
+    color: #FFFFFF;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.price-2 .bttn:hover {
+    background: #64d360;
+    color: #FFFFFF
+}
+
+/* Content Block style 15 modifications */
+.content-block-15 .part1 {
+    background: #e1bc67 url(http://placehold.it/1600x900/e1bc67/ffffff?text=background+1600x900);
+}
+
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .content-block-15 .part1 {
+        background: #e1bc67 url(http://placehold.it/1600x900/e1bc67/ffffff?text=background+1600x900);
+    }
+}
+.content-block-15 .part2 {
+    background: #111111
+}
+.content-block-15 .bttn {
+    background: #111111;
+    border: solid 2px #e1bc67;
+    color: #e1bc67;
+}
+.content-block-15 .bttn:hover {
+    background: #e1bc67;
+    color: #111111;
+}
+
+/* Clients style 2 modifications */
+.clients-2 {
+    background: #222222
+}
+#about .sub-hero-box {
+    float: right;
+    text-align: right;
+}
+@media only screen and (max-width: 767px) {
+    #about .sub-hero-box {
+        float: none;
+        text-align: left;
+    }
+}
+#about .part1 {
+    background: #6ed7bd url(http://placehold.it/1600x900/6ed7bd/ffffff?text=background+1600x900);
+}
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    #about .part1 {
+        background: #6ed7bd url(http://placehold.it/1600x900/6ed7bd/ffffff?text=background+1600x900);
+    }
+}
+#about .bttn {
+    background: #111111;
+    border: solid 2px #6ed7bd;
+    color: #6ed7bd;
+}
+#about .bttn:hover {
+    background: #6ed7bd;
+    color: #111111;
+}

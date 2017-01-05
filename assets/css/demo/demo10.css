@@ -1,0 +1,43 @@
+/* Content Block style 15 modifications */
+.content-block-15 {
+    background: #111111;
+}
+.content-block-15 .part {
+    background: #111111;
+    min-height: 300px;
+    padding: 180px 60px
+}
+.content-block-15 .part1 {
+    background: #8BC34A url(http://placehold.it/800x533/8BC34A/ffffff?text=photo)
+}
+/* Retina background support - use x2 size image background */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .content-block-15 .part1 {
+        background: #8BC34A url(http://placehold.it/800x533/8BC34A/ffffff?text=photo)
+    }
+}
+.content-block-15 .part2 {
+    background: #111111
+}
+.content-block-15 .subh-basic-dark {
+    color: #CCCCCC
+}
+.content-block-15 p {
+    color: #999999
+}
+@media only screen and (max-width: 991px) {
+    .content-block-15 .part {
+        padding: 60px 20px
+    }
+}
+.portfolio-2 .subh-basic-dark,
+.content-section-1 .subh-basic-dark,
+.contact-4 .subh-basic-dark {
+    font-size: 18px;
+}
+.content-section-1 {
+    background: #F1F7FA;
+}

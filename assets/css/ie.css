@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* ie specific stylesheet*/
+
+/* team style 2 for ie */
+.team-2 img {
+    display: block;
+    border-radius: 5px 5px 0px 0px;
+}
+.team-2 figcaption {
+    background: rgba(17, 17, 17, 1);
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+}
+.team-2 figcaption .position {
+    opacity: 1;
+}
+
+/* team style 4 for ie */
+.team-4 .img-wrapper img {
+    border-radius: 5px 5px 0px 0px;
+}
+.team-4 figure figcaption {
+    position: relative;
+    background: rgba(46, 113, 242, 1);
+    border-radius: 0px 0px 5px 5px;
+}

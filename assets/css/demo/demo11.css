@@ -1,0 +1,42 @@
+h4:after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: 5px;
+    border-radius: 15px;
+    background: #111111;
+    background: -webkit-linear-gradient(to right, #111111, #777777, #999999, #CCCCCC, #FFFFFF);
+    background: linear-gradient(to right, #111111, #777777, #999999, #CCCCCC, #FFFFFF);
+}
+/* Clients style 3 modifications */
+
+.clients-3 {
+    border-bottom: solid 1px #EEEEEE;
+    border-top: solid 1px #EEEEEE;
+    padding: 60px 0px;
+}
+.testimonial-2 .all-testimonials .item {
+    background: #FFFFFF;
+}
+@media only screen and (max-width: 540px) {
+    .testimonial-2 h4 {
+        margin-left: 15px;
+    }
+}
+.clients-3 ul {
+    width: 100%;
+}
+.clients-3 ul li {
+    width: 20%;
+}
+@media only screen and (max-width: 520px) {
+    .clients-3 ul li {
+        width: 33.333333%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .clients-3 ul li {
+        width: 50%;
+    }
+}

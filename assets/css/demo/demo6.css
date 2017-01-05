@@ -1,0 +1,16 @@
+/* Content Block 5 */
+.content-block-5 {
+    background: #FFFFFF
+}
+.content-block-5 .all-features .icon {
+    color: #2e71f2;
+}
+.content-block-5 .subh-basic-light {
+    color: #111111;
+}
+.content-block-5 .all-features p {
+    color: #888888;
+}
+.content-block-5 .img-container {
+    box-shadow: 20px 20px 50px #DDDDDD
+}

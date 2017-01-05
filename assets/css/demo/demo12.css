@@ -1,0 +1,39 @@
+.hero-header-5 .subh-basic-light {
+    margin-top: 30px;
+}
+.content-block-8 {
+    background: #333333;
+}
+.content-block-8 .feature p {
+    color: #999999
+}
+
+/* Portfolio style 1 modifications */
+.portfolio-1 {
+    background: #222222
+}
+.grid-img:after {
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+.grid-item:hover .grid-img:after {
+    opacity: 0
+}
+@media only screen and (min-width: 992px) {
+    .grid figure:hover img {
+        opacity: 1;
+    }
+}
+.grid-type-1 figcaption .project {
+    color: #CCCCCC;
+    text-align: left;
+}
+.grid-type-1 figure:hover .project {
+    color: #FFFFFF;
+}
+.grid-type-1 figcaption .company {
+    text-align: left;
+}
+.portfolio-1 .subh-basic-light {
+    font-size: 18px
+}
