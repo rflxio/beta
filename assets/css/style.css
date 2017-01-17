@@ -1723,12 +1723,29 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	width: auto;
 }
 
+@media only screen and (max-width: 991px) {
+    .after-box {
+    margin: 0;
+    }
+}
+
 .after-box p {
 	color: rgba(255,255,255,.9);
 }
 
 .right-section {
 	padding-right: 90px;
+}
+
+@media only screen and (max-width: 991px) {
+    .right-section {
+    padding-right: 5%;
+    padding-left: 5%;
+    }
+
+    .col-md-6.col-sm-8.col-xs-10.right-section {
+    width: 100%;
+    }
 }
 
 h3 {
@@ -1747,12 +1764,20 @@ h3 {
 	width: auto;
 }
 
+@media only screen and (max-width: 991px) {
+    .black-box .container {
+    background: #fff;
+    margin: 0 0px;
+    padding: 120px 0 40px 0;
+    width: auto;
+}
+
 .black-box .row {
 	margin: 0;
 }
 
 .last-section {
-	margin: 0 90px;
+	margin: 0;
 	width: auto;
 }
 
