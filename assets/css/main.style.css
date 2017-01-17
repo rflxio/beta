@@ -3528,11 +3528,13 @@ blockquote {
 	font-weight: bold;
 	line-height: normal;
 	text-transform: uppercase;
+    padding: 0 160px 0 0px;
 }
 
 @media only screen and (max-width: 991px) { 
     .section-title {
     font-size: 48px !important;
+    padding: 0;
     }
 }
 

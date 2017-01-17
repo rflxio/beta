@@ -1715,6 +1715,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (max-width: 991px) {
     .relative .promo-6 {
+    left: 2%;
+    right: 2%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .relative .promo-6 {
     left: 0;
     right: 0;
     }
@@ -2888,7 +2895,18 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-weight: 600;
     color: #CCCCCC;
     margin-top: 20px;
+    padding-right: 110px;
 }
+
+@media only screen and (max-width: 991px) {
+    .promo-6 p {    
+        font-weight: 600;
+        color: #CCCCCC;
+        margin-top: 20px;
+        padding-right: 10px;
+    }
+}
+
 .promo-6 .bttn {
     background: #111111;
     color: #FFFFFF
