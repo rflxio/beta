@@ -1728,7 +1728,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .before-box {
-	padding-bottom: 240px;
+	padding-bottom: 180px;
+}
+
+@media only screen and (max-width: 480px) {
+    .before-box {
+    padding-bottom: 140px;
+    }
 }
 
 .after-box {

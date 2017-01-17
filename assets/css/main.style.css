@@ -541,7 +541,7 @@ section {
 }
 @media only screen and (max-width: 480px) {
     .section-padding {
-        padding: 40px 0px;
+        padding: 75px 0px;
     }
     .section-padding-small {
         padding: 30px 0px;
@@ -637,10 +637,12 @@ section {
 .all-details-wrapper-lg {
     margin-top: 100px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
     .all-details-wrapper {
 /*         margin-top: 20px; */
 				margin-bottom: 60px;
+                padding-left: 5%;
+                padding-right: 5%;
     }
     .all-details-wrapper-md,
     .all-details-wrapper-lg {
@@ -3521,6 +3523,14 @@ blockquote {
 
 .my-article {
 	padding-right: 60px;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 767px) { 
+    .my-article {
+    padding-right: 0;
+    width: 100%;
+    }
 }
 
 .section-title {
@@ -3528,7 +3538,7 @@ blockquote {
 	font-weight: bold;
 	line-height: normal;
 	text-transform: uppercase;
-    padding: 0 160px 0 0px;
+    padding: 0 140px 0 0px;
 }
 
 @media only screen and (max-width: 991px) { 
