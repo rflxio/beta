@@ -443,6 +443,12 @@ h6 {
 	text-transform: uppercase;
 }
 
+@media only screen and (max-width: 480px) {
+    .article-title {
+    padding-right: 80px;
+    }
+}
+
 h1 {
     font-size: 65px !important;
 }
@@ -2286,7 +2292,7 @@ figcaption .project {
         display: block;
         text-align: center;
         margin-right: 0px;
-        background: #EEEEEE
+        /* background: #EEEEEE; */
     }
     .nav-tabs > li > a,
     .nav-tabs > li > a:hover,
@@ -3454,6 +3460,20 @@ blockquote {
 	padding-left: 50px;
 }
 
+@media only screen and (max-width: 991px) {
+    .pl50 {
+    padding-left: 0;
+    text-align: center;
+    }
+
+    .col-md-6.col-sm-8.col-xs-10 {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    }
+}
+
+
 .margin-bottom50 {
 	margin-bottom: 50px;
 }
@@ -3780,6 +3800,12 @@ body img.code-img {
 
 .my-img {
 	margin-top: -80px;
+}
+
+@media only screen and (max-width: 480px) {
+    .my-img {
+    margin-top: -55px;
+}
 }
 
 .btn.tooltipped.tooltipped-s:after {

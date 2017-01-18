@@ -1754,6 +1754,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media only screen and (max-width: 991px) {
     .after-box {
     margin: 0;
+    /*padding-top: 140px;*/
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .after-box {
+    margin: 0;
+    padding-top: 350px;
     }
 }
 
@@ -1773,6 +1781,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     .col-md-6.col-sm-8.col-xs-10.right-section {
     width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .col-md-6.col-sm-8.col-xs-10.right-section {
+    width: 100%;
+    top: -55px;
     }
 }
 
