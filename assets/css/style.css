@@ -438,8 +438,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 .content-block-4 h3 {
     color: #9C27B0;
-    background: -webkit-linear-gradient(to right, #F44336, #E91E63, #9C27B0);
-    background: linear-gradient(to right, #F44336, #E91E63, #9C27B0);
+    background: -webkit-linear-gradient(to right, #E91E63, #F44336);
+    background: linear-gradient(to right, #E91E63, #F44336);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100%;
@@ -2885,11 +2885,18 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* Promo style 4 */
 .promo-4 {
-    background: rgba(133, 108, 212, 0.6);
+    /*background: rgba(133, 108, 212, 0.6);*/
+    background: url("../img/build-stuff-video-preview3.png") no-repeat; 
 }
 .promo-4 .play-button {
     font-size: 80px;
-    color: #FFFFFF
+    color: #222222;
+    background: -webkit-linear-gradient(to right, #04fcfe, #fa40fd);
+    background: linear-gradient(to right, #04fcfe, #fa40fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 180%;
+    display: inline-block;
 }
 
 

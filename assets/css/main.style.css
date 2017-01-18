@@ -496,7 +496,7 @@ h6 {
         font-size: 26px !important;
     }
     h4 {
-        font-size: 22px !important;
+        font-size: 25px !important;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -569,6 +569,17 @@ section {
 .head-center {
     width: 540px;
 }
+
+.center-block-1 h4.margin-top30.text-white {
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(to right, #04fcfe, #fa40fd);
+    background: linear-gradient(to right, #04fcfe, #fa40fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100%;
+    display: inline-block;
+}
+
 .center-block-2 {
     width: 620px;
 }
@@ -1081,8 +1092,10 @@ section {
 .bg-cover-simple {
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-position: center center !important
+    /*background-position: center center !important;*/
+    background-position: top center !important;
 }
+
 
 /* social sharing buttons */
 .social {
