@@ -3439,6 +3439,13 @@ blockquote {
 	line-height: 1.5em; 
 }
 
+@media (max-width: 480px) {
+    .feature-info {
+    padding-right: 10px; 
+    }
+}
+
+
 .landingMenu ul.sub-menu { 
 	display: none;	
 	text-align: left;
@@ -3812,7 +3819,11 @@ body img.code-img {
 }
 
 .my-img {
-	margin-top: -80px;
+	width: 75%;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    margin-left: 0 !important;
+    padding-left: 50px;
 }
 
 @media only screen and (max-width: 480px) {

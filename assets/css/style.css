@@ -1771,6 +1771,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .right-section {
 	padding-right: 90px;
+    margin-bottom: 120px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1803,7 +1804,7 @@ h3 {
 .black-box .container {
 	background: #fff;
 	margin: 0 90px;
-	padding: 120px 0 40px 0;
+	padding: 120px 0 0 0;
 	width: auto;
 }
 
@@ -2886,7 +2887,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Promo style 4 */
 .promo-4 {
     /*background: rgba(133, 108, 212, 0.6);*/
-    background: url("../img/build-stuff-video-preview3.png") no-repeat; 
+    background: url("../img/build-stuff-video-preview4.png") no-repeat; 
 }
 .promo-4 .play-button {
     font-size: 80px;
