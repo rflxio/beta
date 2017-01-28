@@ -1429,8 +1429,14 @@ section {
 
 /* large button */
 .bttn-large {
-    font-size: 1.1em;
-    padding: 20px 40px 18px 40px;
+    font-size: 25px;
+    padding: 22px 40px 18px 40px;
+}
+
+@media only screen and (max-width: 480px) {
+    .bttn-large {
+    font-size: 20px;
+    }
 }
 
 /* medium sized button */
@@ -3629,19 +3635,32 @@ blockquote {
   z-index: 5;
 }
 
+@media only screen and (max-width: 991px) {
+    .text-center2 {
+        text-align: center;
+    }
+    .my-button-box2 {
+      position: relative;
+      /*bottom: -32px;*/
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+}
+
 .my-button {
 	background: linear-gradient(to right, #04fcfe, #fa40fd);
 	border-radius: 15px;
 	color: #fff !important;
 	font-family: 'ApercuProBold';
-	font-size: 30px;
-	line-height: 30px;
+	font-size: 25px;
+	line-height: 25px;
 	margin-bottom: 0;
 }
 
 @media only screen and (max-width: 480px) {
     .my-button {
-    font-size: 25px;
+    font-size: 20px;
     }
 
     .bttn-large {
@@ -3749,8 +3768,15 @@ blockquote {
 }
 
 .my-left-box {
-	margin: auto;
+	margin: auto 0px;
 	width: 70%;
+}
+
+@media only screen and (max-width: 991px) {
+    .my-left-box {
+    margin: auto;
+    width: 100%;
+    }
 }
 
 .my-left-box .promo-6 {
