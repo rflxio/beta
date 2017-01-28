@@ -677,6 +677,13 @@ section {
         }
 }
 
+@media only screen and (max-width: 480px) {
+    .all-details-wrapper {
+        /*margin-top: 20px; */
+        margin-bottom: 50px;
+        }
+}
+
 /* letter spacings */
 .letter-spacing-close {
     letter-spacing: -1px !important;
