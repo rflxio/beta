@@ -998,6 +998,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .content-block-16 .features {
     margin-top: 50px
 }
+
 @media only screen and (max-width: 991px) {
     .content-block-16 {
         padding-bottom: 30px
@@ -1013,10 +1014,21 @@ only screen and (min-device-pixel-ratio: 1.5) {
         margin-right: auto
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .content-block-16 {
+        padding-bottom: 0px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .content-block-16 .col-xs-10,
     .content-block-16 .subtext {
         width: 100%
+    }
+
+    .content-block-16 {
+    padding-bottom: 50px
     }
 }
 
@@ -1715,6 +1727,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	z-index: 2;
 }
 
+@media only screen and (min-width: 991px) {
+    .relative .promo-6 {
+    padding-left: 20px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .relative .promo-6 {
     left: 2%;
@@ -1723,6 +1741,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     .promo-6 .container {
     padding-left: 3%;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .relative .promo-6 {
+    left: 0%;
+    right: 0%;
+    padding-top: 
     }
 }
 
@@ -1751,12 +1777,34 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	margin: 0 90px;
 	padding-top: 200px;
 	width: auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .after-box {
+    margin: 0;
+    padding-top: 280px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
     .after-box {
     margin: 0;
-    /*padding-top: 140px;*/
+    padding-top: 145px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .after-box {
+    margin: 0;
+    padding-top: 205px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .after-box {
+    margin: 0;
+    padding-top: 205px;
     }
 }
 
@@ -1764,6 +1812,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .after-box {
     margin: 0;
     padding-top: 370px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .after-box {
+    margin: 0;
+    padding-top: 420px;
     }
 }
 
@@ -1787,9 +1842,25 @@ only screen and (min-device-pixel-ratio: 1.5) {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .right-section {
+    margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .right-section {
+    margin-bottom: 60px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .col-md-6.col-sm-8.col-xs-10.right-section {
     width: 100%;
+    }
+
+    .right-section {
+    margin-bottom: 0px;
     }
 }
 
@@ -1811,16 +1882,28 @@ h3 {
 
 @media only screen and (max-width: 991px) {
     .black-box .container {
-    background: #fff;
-    margin: 0 0px;
+    margin: 0;
     padding: 120px 0 40px 0;
-    width: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .black-box .container {
+    margin: 0;
+    padding: 70px 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .black-box .container {
+    margin: 0;
+    padding: 70px 0 0 0;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .black-box .container {
-    padding: 70px 0 40px 0;
+    padding: 70px 0 50px 0;
     }
 }
 
@@ -2933,6 +3016,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .promo-61 {
 	background: linear-gradient(to right, #ff0000, #ff00ff);
+    /*background: #222222;*/
 }
 
 .promo-6 p {    
@@ -2952,8 +3036,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .promo-6 .bttn {
-    background: #111111;
-    color: #FFFFFF
+    background: linear-gradient(to right, #04fcfe, #fa40fd);
+    color: #FFFFFF;
+    font-family: "ApercuProBold";
 }
 
 

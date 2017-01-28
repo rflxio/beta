@@ -545,15 +545,15 @@ section {
 }
 @media only screen and (max-width: 767px) {
     .section-padding {
-        padding: 60px 0px;
+        padding: 70px 0px 60px 0px;
     }
 }
 @media only screen and (max-width: 480px) {
     .section-padding {
-        padding: 70px 0px;
+        padding: 70px 0px 50px 0px;
     }
     .section-padding-small {
-        padding: 60px 0px 40px 0px;
+        padding: 60px 0px 50px 0px;
     }
 }
 
@@ -659,15 +659,22 @@ section {
 }
 @media only screen and (max-width: 991px) {
     .all-details-wrapper {
-/*         margin-top: 20px; */
-				margin-bottom: 60px;
-                padding-left: 5%;
-                padding-right: 5%;
+        /*margin-top: 20px; */
+		margin-bottom: 60px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .all-details-wrapper-md,
     .all-details-wrapper-lg {
         margin-top: 50px;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    .all-details-wrapper {
+        /*margin-top: 20px; */
+        margin-bottom: 15px;
+        }
 }
 
 /* letter spacings */
@@ -1086,17 +1093,11 @@ section {
 }
 
 /* cover background */
-.bg-cover {
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-position: 50% 0;
-}
+
 .bg-cover-simple {
     background-repeat: no-repeat !important;
-    background-size: cover !important;
-    /*background-position: center center !important;*/
-    background-position: top center !important;
+    /*background-size: cover !important;*/
+    /*background-position: top center !important;*/
 }
 
 
@@ -1422,7 +1423,7 @@ section {
 /* large button */
 .bttn-large {
     font-size: 1.1em;
-    padding: 20px 40px 15px 40px;
+    padding: 20px 40px 18px 40px;
 }
 
 /* medium sized button */
@@ -2301,14 +2302,16 @@ figcaption .project {
 @media only screen and (max-width: 767px) {
     .nav-tabs > li {
         display: block;
-        float: none;
+        float: left;
+        margin-right: 20px;
         margin-bottom: 5px
     }
     .nav-tabs > li > a {
         display: block;
-        text-align: center;
+        text-align: left;
         margin-right: 0px;
         /* background: #EEEEEE; */
+        padding: 5px 0px;
     }
     .nav-tabs > li > a,
     .nav-tabs > li > a:hover,
@@ -2323,8 +2326,9 @@ figcaption .project {
     .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:hover,
     .nav-tabs > li.active > a:focus {
-        background: #2e71f2;
-        color: #FFFFFF
+        background: none;
+        color: #71a9fd;
+        border-bottom: 2px solid #71a9fd;
     }
 }
 
@@ -3576,6 +3580,12 @@ blockquote {
     }
 }
 
+@media only screen and (max-width: 480px) { 
+    .my-article {
+    margin-bottom: 40px;
+    }
+}
+
 .section-title {
 	font-size: 70px !important;
 	font-weight: bold;
@@ -3606,7 +3616,7 @@ blockquote {
 
 .my-button-box {
   position: absolute;
-  bottom: -30px;
+  bottom: -32px;
   left: 0;
   right: 0;
   z-index: 5;
@@ -3621,6 +3631,17 @@ blockquote {
 	line-height: 30px;
 	margin-bottom: 0;
 }
+
+@media only screen and (max-width: 480px) {
+    .my-button {
+    font-size: 25px;
+    }
+
+    .bttn-large {
+    padding: 20px 35px 15px 35px;
+    }
+}
+
 
 .fixed-box div:first-child {
 	position: static;
@@ -3835,6 +3856,12 @@ body img.code-img {
     margin-left: auto !important;
     margin-right: auto;
     padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .my-img {
+    margin-bottom: 60px;
     }
 }
 

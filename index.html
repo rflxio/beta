@@ -241,7 +241,7 @@ Due to the system of permissions user receives only necessary data while other (
                         <div class="col-md-6 col-sm-8 col-xs-10 right-section">                                                        
                             <!-- Tabs Navigation -->
 		                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-		                            <li class="active"><a href="#sophisticated" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">Sophisticated</a></li>
+		                            <li class="active"><a href="#ultra" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">Ultra</a></li>
 		                            <li class=""><a href="#crazy" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">Crazy</a></li>
 		                            <li class=""><a href="#beautiful" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">Beautiful</a></li>
 		                        </ul>
@@ -415,30 +415,14 @@ Due to the system of permissions user receives only necessary data while other (
                             <!-- Main heading -->
                             <h3 class="text-uppercase">Interface (JavaScript)</h3>
                             <!-- main text -->
-                            <p class="text-extra-large margin-top20 font-hind">Reflex на стороне клиента реализует паттерн репозиторий, иными словами хранилище данных. Что бы создать репозиторий необходимо определить схему данных - обыкновенный JSON. Давайте определим две сущности “City” и “Country”</p>
-                            <p class="text-extra-large margin-top20 font-hind">Это типичная структура данных, где страна и город имеют атомарное поле “name”, в свою очередь City в поле “country” ссылается на страну “Country”. На основании этих данных клиентская библиотека будет способна понять то как должны выглядеть данные скоторыми она будет работать.</p>
-                            <p class="text-extra-large margin-top20 font-hind">После того как схема готова можно создать репозиторий</p>
-                            <p class="text-extra-large margin-top20 font-hind">Но этот репозиторий еще пока пуст, давайте создадим данные для этого репозитория:</p>
-                            <p class="text-extra-large margin-top20 font-hind">Данные изображенные на этом рисунке в таком виде при использовании Reflex не придется создавать в ручную обычно такие данные будут передаваться сервером на клиент автоматически но для явности давайте рассмотрим из каких элементов состоят эти данные.</p>
-                            <ol id="e1">
-	                            <li>Первое на что стоит обратить внимание что переменная в которую ложится этот массив называется diff. Причиной тому есть специальный формат обмена данными между репозиториями который был назван diff по аналогии c diff’ом репозитория GIT этот формат имеет такую же природу как и обычный diff и при его помощи реализуются операции слияния, пересечения, суммы и минуса множеств данных о которых более детальный разговор пойдет далее</li>
-	                            <li>Второе на что стоит обратить внимание что diff это массив, важно осознавать что от порядка находящемся в этом массиве данных в особых случаях может меняться результат операций над множествами данных, о чем более детально будет написано позже</li>
-	                            <li>Элементы массива назвем Record’ами, это сервисные сущности используемые для переноса данных между репозиториями либо базой</li>
-	                            <li>Поле prv - это ID предыдущей версии текущего данного, так как это первая версия предыдущей версии еще не существует и по этому это поле равно null</li>
-	                            <li>Поле rid - расшифровывается как Reference ID или просто ID сущности, для клиентской библиотеки Reflex - rid может быть любой строкой</li>
-	                            <li>Поле vid - расшифровывается как Version ID, для клиентской библиотеки Reflex - rid может быть так-же любой строкой</li>
-	                            <li>Поле pid - расшифровывается как Permission ID, это разрешение при помощи которого сервер понимает можно ли текущему пользователю отправлять текущее данное или нет, более детально вопросы сервера и разрешений мы будем обсуждать позже</li>
-	                            <li>Поле proto - содержит контейнер с данными в разобранной форме, что означает что ссылки на сущности в этой форме представлены строками
-		                            <ol class="my-list">
-			                            <li>Обратите так-же внимание что для первых двух record’ов поле “proto.country” ссылается на rid соответствующей сущности</li>
-		                            </ol>
-	                            </li>
-	                            <li>Поле table - содержит информацию о том к какой таблице данных относится текущая сущность</li>
-                            </ol>
-                            <p class="text-extra-large margin-top20 font-hind">Далее давайте добавим описанные данные в репозиторий</p>
-                            <p class="text-extra-large margin-top20 font-hind">Операция merge возвращает формат diff аналогичный по типу к входной переменной однако обратный по отношению к переменной diff который попадает в переменную out, таким образом если вызвать</p>
-                            <p class="text-extra-large margin-top20 font-hind">то такой вызов переведет репозиторий в исходное состояние.</p>
-                            <p class="text-extra-large margin-top20 font-hind">Важно упомянуть что любые изменения состояния репозитория осуществляются лишь при помощи единственной операции merge.</p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
+                            
+                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
+                            <p class="text-extra-large margin-top20 font-hind"></p>
                         </div>
                         <!-- image wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10 sticky-column-right" id="sticker" data-sticky_column="">
@@ -536,39 +520,38 @@ Due to the system of permissions user receives only necessary data while other (
                 <div class="container">
                     <div class="center-block-1">
                         <!-- main heading -->
-                        <h3 class="letter-spacing0 text-white">Its the design with which we can stand out in crowd</h3>
-                        <!-- sub-text -->
-                        <p class="text-uppercase letter-spacing1">Let's meet higher standards</p>
+                        <h3 class="letter-spacing0 text-white section-title" style="padding-right: 0px">TRY IT NOW</h3>
+                        <!-- sub-heading -->
+                        <p class="text-extra-large margin-top20 font-hind" style="padding-right: 0px !important; color: #FFFFFF;">See Reflex's documentation and fresh samples</p>
                         <!-- button -->
-                        <a class="bttn bttn-med bttn-scale bttn75 margin-top20 letter-spacing2">Start Free Trial</a>
+                        <a class="bttn bttn-large bttn-scale bttn75 margin-top20 letter-spacing2">GET STARTED</a>
                     </div>
                 </div>
             </section>                                                                       
             
             <!-- Promo Style 1 -->
-            <section class="section-padding-small promo-1 bg-cover-simple">
+            <!--<section class="section-padding-small promo-1 bg-cover-simple">
                 <div class="container">
                     <div class="col-md-10 just-center">
                         <div class="row">
-                            <!-- left content part -->
+                            
                             <div class="col-sm-8 col-xs-10">
-                                <!-- sub-heading -->
+                                
                                 <span class="subh-basic-light">Exclusive Offer</span>
-                                <!-- main heading -->
+                                
                                 <h5 class="text-white margin-top20 font-poppins">Subscribe to Our Beautiful Newsletter Today and get 25% Off on your First Month!</h5>
-                                <!-- info -->
+                                
                                 <p class="margin-top20">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
                             </div>
-                            <!-- right button part -->
+                            
                             <div class="col-sm-4 text-center">
-                                <!-- subscribe button -->
+                                
                                 <a class="bttn bttn-large bttn75 margin-top30 bttn-scale">Subscribe</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
+            </section>-->
             
             <!-- Footer Style 2 -->
             <footer class="footer-2">
