@@ -476,7 +476,8 @@ h6 {
         font-size: 38px !important;
     }
     h3 {
-        font-size: 28px !important;
+        /*font-size: 28px !important;*/
+        font-size: 34px !important;
     }
     h4 {
         font-size: 24px !important;
@@ -493,7 +494,8 @@ h6 {
         font-size: 34px !important;
     }
     h3 {
-        font-size: 26px !important;
+        /*font-size: 26px !important;*/
+        font-size: 28px !important;
     }
     h4 {
         font-size: 25px !important;
@@ -507,7 +509,8 @@ h6 {
         font-size: 28px !important;
     }
     h3 {
-        font-size: 25px !important;
+        /*font-size: 25px !important;*/
+        font-size: 28px !important;
     }
 }
 @media only screen and (max-width: 320px) {
@@ -547,10 +550,10 @@ section {
 }
 @media only screen and (max-width: 480px) {
     .section-padding {
-        padding: 75px 0px;
+        padding: 70px 0px;
     }
     .section-padding-small {
-        padding: 45px 0px 30px 0px;
+        padding: 60px 0px 40px 0px;
     }
 }
 
@@ -3563,7 +3566,7 @@ blockquote {
 
 .my-article {
 	padding-right: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 
 @media only screen and (max-width: 767px) { 
@@ -3826,10 +3829,26 @@ body img.code-img {
     padding-left: 50px;
 }
 
+@media only screen and (max-width: 991px) {
+    .my-img {
+    width: 60%;
+    margin-left: auto !important;
+    margin-right: auto;
+    padding-left: 0;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .my-img {
-    margin-top: -55px;
-}
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: auto;
+    padding-left: 0;
+    }
+
+    .img-center.section-image.my-img {
+        margin-bottom: 55px;
+    }
 }
 
 .btn.tooltipped.tooltipped-s:after {

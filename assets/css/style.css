@@ -1003,7 +1003,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
         padding-bottom: 30px
     }
     .content-block-16 img {
-        margin-bottom: 30px
+        /*margin-bottom: 30px;*/
+        margin-bottom: 50px;
+
     }
     .content-block-16 .col-sm-8 {
         float: none;
@@ -1761,7 +1763,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media only screen and (max-width: 480px) {
     .after-box {
     margin: 0;
-    padding-top: 350px;
+    padding-top: 370px;
     }
 }
 
@@ -1788,7 +1790,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media only screen and (max-width: 480px) {
     .col-md-6.col-sm-8.col-xs-10.right-section {
     width: 100%;
-    top: -55px;
     }
 }
 
@@ -1814,6 +1815,12 @@ h3 {
     margin: 0 0px;
     padding: 120px 0 40px 0;
     width: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .black-box .container {
+    padding: 70px 0 40px 0;
     }
 }
 
