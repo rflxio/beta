@@ -535,13 +535,19 @@ section {
     padding: 0px;
 }
 .section-padding {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
 }
 .section-padding-small {
-    padding: 60px 0px;
+    padding: 60px 0;
 }
 .section-padding-bottom-zero {
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+    .section-padding {
+        padding: 100px 0;
+    }
 }
 @media only screen and (max-width: 767px) {
     .section-padding {
@@ -550,7 +556,7 @@ section {
 }
 @media only screen and (max-width: 480px) {
     .section-padding {
-        padding: 70px 0px 50px 0px;
+        padding: 70px 0 0 0;
     }
     .section-padding-small {
         padding: 60px 0px 50px 0px;
@@ -971,6 +977,29 @@ section {
 .margin-top30 {
     margin-top: 30px !important;
 }
+
+.docs-right-box .margin-top30 {
+    margin-top: 30px !important;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .docs-right-box .margin-top30 {
+    margin-top: 0px !important;
+    }  
+}
+
+@media only screen and (max-width: 991px) {
+    .docs-right-box .margin-top30 {
+    margin-top: 60px !important;
+    }  
+}
+
+@media only screen and (max-width: 480px) {
+    .docs-right-box .margin-top30 {
+    margin-top: 30px !important;
+    }  
+}
+
 .margin-top50 {
     margin-top: 50px !important;
 }
@@ -3648,6 +3677,14 @@ blockquote {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .my-button-box2 {
+          position: relative;
+          /*bottom: -32px;*/
+          float: left !important;
+        }
+    }
+
 .my-button {
 	background: linear-gradient(to right, #04fcfe, #fa40fd);
 	border-radius: 15px;
@@ -3773,6 +3810,13 @@ blockquote {
 }
 
 @media only screen and (max-width: 991px) {
+    .my-left-box {
+    margin: auto;
+    width: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .my-left-box {
     margin: auto;
     width: 100%;
