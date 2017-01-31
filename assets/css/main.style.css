@@ -1003,7 +1003,7 @@ section {
     margin-top: 30px !important;
     }  
 
-    .bttn.bttn-large.bttn75.margin-top30.bttn-scale.my-button {
+    .row.fixed-box {
     margin-bottom: 30px;
     }
 }
@@ -3705,11 +3705,11 @@ blockquote {
 
 @media only screen and (max-width: 480px) {
     .my-button {
-    font-size: 20px;
+    font-size: 22px;
     }
 
     .bttn-large {
-    padding: 20px 35px 15px 35px;
+    padding: 20px 35px 17px 35px;
     }
 }
 
@@ -3833,7 +3833,7 @@ blockquote {
 
 .my-left-box .promo-6 {
 	color: #fff;
-	font-size: 20px;
+	font-size: 22px;
 	font-family: 'ApercuProBold';
 	line-height: 80px;
 	text-align: center;
@@ -3842,6 +3842,12 @@ blockquote {
 .my-item {
 	border-bottom: 1px solid;
 	padding: 15px 20px 23px;
+}
+
+@media only screen and (max-width: 480px) {
+    .my-item {
+    padding: 6px 20px 21px;
+}
 }
 
 .my-item:last-child {
@@ -3903,6 +3909,12 @@ blockquote {
 	border: 0;
 	box-shadow: none;
 	margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 480px) {
+    .my-accordion .panel {
+    margin-bottom: 60px;
+    }
 }
 
 .my-accordion .panel-body {
