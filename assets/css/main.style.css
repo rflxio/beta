@@ -535,7 +535,7 @@ section {
     padding: 0px;
 }
 .section-padding {
-    padding: 120px 0 0 0;
+    padding: 120px 0;
 }
 .section-padding-small {
     padding: 60px 0;
@@ -556,7 +556,7 @@ section {
 }
 @media only screen and (max-width: 480px) {
     .section-padding {
-        padding: 70px 0 0 0;
+        padding: 70px 0 60px 0;
     }
     .section-padding-small {
         padding: 60px 0px 50px 0px;
@@ -986,6 +986,10 @@ section {
     .docs-right-box .margin-top30 {
     margin-top: 0px !important;
     }  
+
+    .bttn.bttn-large.bttn75.margin-top30.bttn-scale.my-button {
+    margin-top: 30px !important;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -998,6 +1002,10 @@ section {
     .docs-right-box .margin-top30 {
     margin-top: 30px !important;
     }  
+
+    .bttn.bttn-large.bttn75.margin-top30.bttn-scale.my-button {
+    margin-bottom: 30px;
+    }
 }
 
 .margin-top50 {

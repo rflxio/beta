@@ -413,31 +413,47 @@ Due to the system of permissions user receives only necessary data while other (
                         <!-- content wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10 sticky-column-left" data-sticky_column="">
                             <!-- Main heading -->
-                            <h3 class="text-uppercase">Interface</h3>
+                            <h3 class="text-uppercase">Interface (JavaScript)</h3>
                             <!-- main text -->
-                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
-                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
-                            <p class="text-extra-large margin-top20 font-hind">Reflex can work in conjunction with the absolute majority of the existing databases that support a minimal set of operations. It can be as Industry Standard SQL (such as Microsoft SQL Server, Oracle SQL, MySQL, Postgress SQL, et al.), as well as NoSQL databases (MongoDB, RavenDB, Redis, Cassandra, and others.).</p>
-                            
-                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
-                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
-                            <p class="text-extra-large margin-top20 font-hind">Reflex uses only one "entry point" (endpoint) for data exchange, that in comparison with typical applications using dozens, hundreds and thousands of endpoints, can greatly simplify the application and increase its reliability.</p>
-                            <p class="text-extra-large margin-top20 font-hind"></p>
+                            <p class="text-extra-large margin-top20 font-hind">Reflex на стороне клиента реализует паттерн репозиторий, иными словами хранилище данных. Что бы создать репозиторий необходимо определить схему данных - обыкновенный JSON. Давайте определим две сущности “City” и “Country”</p>
+                            <p class="text-extra-large margin-top20 font-hind">Это типичная структура данных, где страна и город имеют атомарное поле “name”, в свою очередь City в поле “country” ссылается на страну “Country”. На основании этих данных клиентская библиотека будет способна понять то как должны выглядеть данные скоторыми она будет работать.</p>
+                            <p class="text-extra-large margin-top20 font-hind">После того как схема готова можно создать репозиторий</p>
+                            <p class="text-extra-large margin-top20 font-hind">Но этот репозиторий еще пока пуст, давайте создадим данные для этого репозитория:</p>
+                            <p class="text-extra-large margin-top20 font-hind">Данные изображенные на этом рисунке в таком виде при использовании Reflex не придется создавать в ручную обычно такие данные будут передаваться сервером на клиент автоматически но для явности давайте рассмотрим из каких элементов состоят эти данные.</p>
+                            <ol id="e1">
+                                <li>Первое на что стоит обратить внимание что переменная в которую ложится этот массив называется diff. Причиной тому есть специальный формат обмена данными между репозиториями который был назван diff по аналогии c diff’ом репозитория GIT этот формат имеет такую же природу как и обычный diff и при его помощи реализуются операции слияния, пересечения, суммы и минуса множеств данных о которых более детальный разговор пойдет далее</li>
+                                <li>Второе на что стоит обратить внимание что diff это массив, важно осознавать что от порядка находящемся в этом массиве данных в особых случаях может меняться результат операций над множествами данных, о чем более детально будет написано позже</li>
+                                <li>Элементы массива назвем Record’ами, это сервисные сущности используемые для переноса данных между репозиториями либо базой</li>
+                                <li>Поле prv - это ID предыдущей версии текущего данного, так как это первая версия предыдущей версии еще не существует и по этому это поле равно null</li>
+                                <li>Поле rid - расшифровывается как Reference ID или просто ID сущности, для клиентской библиотеки Reflex - rid может быть любой строкой</li>
+                                <li>Поле vid - расшифровывается как Version ID, для клиентской библиотеки Reflex - rid может быть так-же любой строкой</li>
+                                <li>Поле pid - расшифровывается как Permission ID, это разрешение при помощи которого сервер понимает можно ли текущему пользователю отправлять текущее данное или нет, более детально вопросы сервера и разрешений мы будем обсуждать позже</li>
+                                <li>Поле proto - содержит контейнер с данными в разобранной форме, что означает что ссылки на сущности в этой форме представлены строками
+                                    <ol class="my-list">
+                                        <li>Обратите так-же внимание что для первых двух record’ов поле “proto.country” ссылается на rid соответствующей сущности</li>
+                                    </ol>
+                                </li>
+                                <li>Поле table - содержит информацию о том к какой таблице данных относится текущая сущность</li>
+                            </ol>
+                            <p class="text-extra-large margin-top20 font-hind">Далее давайте добавим описанные данные в репозиторий</p>
+                            <p class="text-extra-large margin-top20 font-hind">Операция merge возвращает формат diff аналогичный по типу к входной переменной однако обратный по отношению к переменной diff который попадает в переменную out, таким образом если вызвать</p>
+                            <p class="text-extra-large margin-top20 font-hind">то такой вызов переведет репозиторий в исходное состояние.</p>
+                            <p class="text-extra-large margin-top20 font-hind">Важно упомянуть что любые изменения состояния репозитория осуществляются лишь при помощи единственной операции merge.</p>
                         </div>
                         <!-- image wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10 sticky-column-right" id="sticker" data-sticky_column="">
                             <!-- Tabs Navigation -->
                           <div class="code-box" id="code-box-1">
-		                        <ul id="tabs" class="nav nav-tabs code-tabs" data-tabs="tabs">
-		                            <li class="active"><a href="#ts" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
-		                            <li class=""><a href="#html" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
-		                            <li class=""><a href="#css" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
-		                            <li class=""><a href="#backend" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
-		                        </ul>
-		                        <!-- Tabs Content -->
-		                        <div id="my-tab-content" class="tab-content code-tab-content">
-		                            <div class="tab-pane active" id="ts">
-	                              	<pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
+                                <ul id="tabs" class="nav nav-tabs code-tabs" data-tabs="tabs">
+                                    <li class="active"><a href="#ts" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
+                                    <li class=""><a href="#html" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
+                                    <li class=""><a href="#css" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
+                                    <li class=""><a href="#backend" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
+                                </ul>
+                                <!-- Tabs Content -->
+                                <div id="my-tab-content" class="tab-content code-tab-content">
+                                    <div class="tab-pane active" id="ts">
+                                    <pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
 <span>{</span>
     @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
     <span class="hljs-keyword">public</span> <span class="hljs-id">Employees</span>: <span class="hljs-keyword">Map</span><<span class="hljs-keyword"><span class="hljs-built_in">string</span></span>, <span class="hljs-keyword"><span class="hljs-built_in">Employer</span></span>>;
@@ -456,31 +472,31 @@ Due to the system of permissions user receives only necessary data while other (
     <span class="hljs-keyword">public</span> clone(<span class="hljs-id">x</span>: <span class="hljs-keyword"><span class="hljs-built_in">any</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: any</span></span>{ <span class="hljs-number">return </span><span class="hljs-keyword">null</span>; }
     <span class="hljs-keyword">public</span> markDeleted(<span class="hljs-id">x</span>: <span class="hljs-keyword"><span class="hljs-built_in">any</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: void </span></span>{ }
     <span class="hljs-keyword">public</span> diff()<span class="hljs-keyword"><span class="hljs-built_in">: any </span></span>{ <span class="hljs-number">return </span><span class="hljs-keyword">null</span>; }
-}</code></pre>  		                            
-																</div>
-		                            <div class="tab-pane" id="html">
-		                                
-		                            </div>
-		                            <div class="tab-pane" id="css">
-		                                
-		                            </div>
-		                            <div class="tab-pane" id="backend">
-		                                
-		                            </div>
-															</div>
-		                        </div>
-		                        
-		                        <div class="code-box" id="code-box-2">
-		                        <ul id="tabs" class="nav nav-tabs code-tabs" data-tabs="tabs">
-		                            <li class="active"><a href="#ts" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
-		                            <li class=""><a href="#html" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
-		                            <li class=""><a href="#css" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
-		                            <li class=""><a href="#backend" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
-		                        </ul>
-		                        <!-- Tabs Content -->
-		                        <div id="my-tab-content" class="tab-content code-tab-content">
-		                            <div class="tab-pane active" id="ts">
-	                              	<pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
+}</code></pre>                                      
+                                                                </div>
+                                    <div class="tab-pane" id="html">
+                                        
+                                    </div>
+                                    <div class="tab-pane" id="css">
+                                        
+                                    </div>
+                                    <div class="tab-pane" id="backend">
+                                        
+                                    </div>
+                                                            </div>
+                                </div>
+                                
+                                <div class="code-box" id="code-box-2">
+                                <ul id="tabs" class="nav nav-tabs code-tabs" data-tabs="tabs">
+                                    <li class="active"><a href="#ts" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
+                                    <li class=""><a href="#html" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
+                                    <li class=""><a href="#css" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
+                                    <li class=""><a href="#backend" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
+                                </ul>
+                                <!-- Tabs Content -->
+                                <div id="my-tab-content" class="tab-content code-tab-content">
+                                    <div class="tab-pane active" id="ts">
+                                    <pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
 <span>{</span>
     @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
     <span class="hljs-keyword">public</span> <span class="hljs-id">Employees</span>: <span class="hljs-keyword">Map</span><<span class="hljs-keyword"><span class="hljs-built_in">string</span></span>, <span class="hljs-keyword"><span class="hljs-built_in">Employer</span></span>>;
@@ -497,19 +513,19 @@ Due to the system of permissions user receives only necessary data while other (
     @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
     <span class="hljs-keyword">public</span> <span class="hljs-id">Employees</span>: <span class="hljs-keyword">Map</span><<span class="hljs-keyword"><span class="hljs-built_in">string</span></span>, <span class="hljs-keyword"><span class="hljs-built_in">Employer</span></span>>;
 });
-</code></pre>  		                            
-																</div>
-		                            <div class="tab-pane" id="html">
-		                                
-		                            </div>
-		                            <div class="tab-pane" id="css">
-		                                
-		                            </div>
-		                            <div class="tab-pane" id="backend">
-		                                
-		                            </div>
-															</div>
-		                        </div>                         
+</code></pre>                                   
+                                                                </div>
+                                    <div class="tab-pane" id="html">
+                                        
+                                    </div>
+                                    <div class="tab-pane" id="css">
+                                        
+                                    </div>
+                                    <div class="tab-pane" id="backend">
+                                        
+                                    </div>
+                                                            </div>
+                                </div>                         
                             <!-- features wrapper -->                            
                         </div>
                     </div>
