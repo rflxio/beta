@@ -18,6 +18,7 @@
 
 .landingMenu a {
 	display:inline-block;
+	color: #000 !important;
 }
 
 .landingMenu a.cur {
