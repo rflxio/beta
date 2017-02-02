@@ -593,3 +593,22 @@ Version: 1.2 - blog stylesheet
 .comment-form textarea:focus {
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
 }
+
+section.blog-single {
+    padding: 0px;
+}
+
+h4.guide-heading {
+    display: block !important;
+    border-bottom: none !important;
+    padding: 0 240px 20px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    h4.guide-heading {
+    display: block !important;
+    border-bottom: 1px solid #000 !important;
+    padding: 0 10px 20px 0;
+    }
+}
+

@@ -1763,6 +1763,27 @@ only screen and (min-device-pixel-ratio: 1.5) {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .container {
+    padding-left: 5%;
+    padding-right: 5%;
+    }
+
+    .col-md-6.col-sm-7 {
+    padding-left: 0;
+    padding-right: 0;
+    }
+
+    .col-md-9.blog-single-sidebar {
+    padding-left: 0;
+    padding-right: 0;
+    }
+
+    .page-title-simple .title-nav {
+    margin-left: 0;
+    }
+}
+
 .before-box {
 	padding-bottom: 180px;
 }
