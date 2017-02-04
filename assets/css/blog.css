@@ -627,3 +627,6 @@ h6.guide-heading {
     }
 }
 
+h6.guide-heading.chapter {
+    margin-top: 70px;
+    }

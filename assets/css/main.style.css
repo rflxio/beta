@@ -3013,9 +3013,9 @@ blockquote {
 }
 @media only screen and (max-width: 767px) {
     .page-title-simple .title-nav {
-        float: none;
-        margin-top: 20px;
-        margin-left: 0px;
+    float: none;
+    margin-top: 0px;
+    margin-left: 0px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -4004,4 +4004,14 @@ body img.code-img {
 
 .blog-single-sidebar article {
 	margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 480px) {
+    .blog-single-sidebar article {
+    margin-bottom: 60px;
+    }   
+}
+
+.chapter {
+    margin-top: 
 }
