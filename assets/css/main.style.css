@@ -2192,11 +2192,21 @@ figcaption .project {
 /* ---------------------------------
 10. Accordion Styles 
  ---------------------------------*/
+
+.panel {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
 .panel-group .panel {
     border-radius: 0;
-    border: solid 1px #888888;
+    /*border-bottom: solid 1px #000;*/
+    border-bottom: none;
     margin: 15px 0px;
 }
+
 .panel-group panel.accordion-toggle.collapsed {
     box-shadow: none
 }
@@ -2205,15 +2215,18 @@ figcaption .project {
 }
 .panel-body {
     padding: 20px;
+    border-top: none !important; 
 }
 .panel-body p {
     margin: 0px;   
 }
 .accordion-toggle {
-    background: #EEEEEE;
+    /*background: #EEEEEE;*/
+    border-bottom: 1px solid #222;
+    background: #FFF;
     position: relative;
     display: block;
-    padding: 10px 24px 10px 20px;    
+    padding: 10px 24px 10px 0px;    
     font-weight: 500;
     color: #222222;
     font-size: 16px;
@@ -2225,7 +2238,9 @@ figcaption .project {
 }
 .accordion-toggle:hover,
 .accordion-toggle.collapsed:hover {
-    background: #EEEEEE
+    /*background: #EEEEEE;*/
+    background: #FFF;
+    border-bottom: 1px solid #222;
 }
 .accordion-toggle.collapsed {
     background: #FFFFFF
@@ -3031,7 +3046,8 @@ blockquote {
 
 /* Simple Page Title Style 2 */
 .page-title-2 {
-    background: #111111;
+    /*background: #111111;*/
+    background: #222;
 }
 .page-title-2 .title-nav li a:hover,
 .page-title-2 .title-nav li.current a {
@@ -4014,4 +4030,8 @@ body img.code-img {
 
 .chapter {
     margin-top: 
+}
+
+.faq-heading {
+    margin: 40px 0;
 }
