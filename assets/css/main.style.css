@@ -4051,6 +4051,26 @@ body img.code-img {
     margin: 40px 0;
 }
 
+.title-nav-back {
+    margin-top: 10px;
+}
+
+.button-back-white {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: transparent url(../img/other/arrow-w.svg) no-repeat center center;
+    opacity: 0.5;
+}
+
+.button-back-white:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
 .col-md-12.col-sm-12.foo {
     padding-left: 0 !important;
 }
