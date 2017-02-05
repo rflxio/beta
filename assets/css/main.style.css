@@ -2987,6 +2987,11 @@ blockquote {
     padding: 80px 0px 50px 0px;
     border-bottom: solid 1px #DDDDDD
 }
+
+.col-md-6.col-sm-7 {
+    padding-left: 0 !important;
+}
+
 .page-title-simple h3 {    
 }
 .page-title-simple p {
@@ -3824,7 +3829,7 @@ blockquote {
 }
 
 .my-page-title-simple {
-	padding-top: 55px;
+	padding-top: 50px;
 }
 
 .my-page-title-simple h3 {
