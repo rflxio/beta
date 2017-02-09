@@ -989,6 +989,10 @@ section {
     margin-top: 30px !important;
 }
 
+.margin-bottom30 {
+    margin-bottom: 30px !important;
+}
+
 .docs-right-box .margin-top30 {
     margin-top: 30px !important;
 }
@@ -3579,8 +3583,12 @@ blockquote {
 
     .col-md-6.col-sm-8.col-xs-10 {
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    /*padding-left: 5%;
+    padding-right: 5%;*/
+    }
+
+    .row.fixed-box {
+    margin: auto 0px;
     }
 }
 
