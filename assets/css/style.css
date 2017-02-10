@@ -1698,9 +1698,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* Hero Header style 6 */
 .hero-header-6 {
-    background: #EEEEEE url(../img/main-bg.jpg);
+    background: #EEEEEE url(../img/rflx-placeholder.png);
     min-height: 200px;
-    padding-bottom: 60px
+    padding-bottom: 60px;
+    background-size: cover;
 }
 
 #main-box {
@@ -1965,7 +1966,8 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .hero-header-6 {
-        background: #EEEEEE url(http://placehold.it/1600x1067/EEEEEE/BDBDBD?text=background+1600x1067);
+        background: #EEEEEE url(../img/rflx-placeholder.png);
+        background-size: cover;
     }
 }
 .hero-header-6 p {
