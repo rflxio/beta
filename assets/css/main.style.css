@@ -4117,6 +4117,21 @@ body img.code-img {
     box-shadow: 0px 16px 20px #DDDDDD;
 }
 
+.support-icn {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: All 0.4s ease;
+    transition: All 0.4s ease;
+    /*-webkit-transform: translateZ(0);
+    transform: translateZ(0);*/
+}
+
 .content-block-12 .feature:hover .support-icn {
     background-color: #fff;
     top: 48%;
@@ -4127,24 +4142,12 @@ body img.code-img {
 }
 
 .icn-stackoverflow {
-    content: '';
-    position: absolute;
-    display: inline-block;
     width: 33px;
     height: 33px;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
     /*background: transparent url(../img/other/stacklogo.svg) no-repeat center center !important;*/
     -webkit-mask: url(../img/other/stacklogo.svg) no-repeat 50% 50% !important;
     mask: url(../img/other/stacklogo.svg) no-repeat 50% 50% !important;
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: #f48023;
-    -webkit-transition: All 0.4s ease;
-    transition: All 0.4s ease;
-    /*-webkit-transform: translateZ(0);
-    transform: translateZ(0);*/
 }
