@@ -84,10 +84,17 @@ nav {
     margin-left: 10px;
     display: inline-block;
     float: left;
-    margin-top: 15px;
+    margin-top: 12px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+@media (max-width: 991px) {
+    .brand-name {
+    margin-left: 5%;
+    }
+}
+
 .brand-name img {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -122,7 +129,7 @@ nav {
     width: 50px;
     height: 50px;
     float: right;
-    background: #EEE;
+    /*background: #EEE;*/
 }
 .toggle-bttn:focus {
     outline: 0
@@ -400,7 +407,7 @@ nav {
         color: #555555;
     }
     .min-padding {
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
+        /*box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);*/
         background: #fff;
     }
     .min-padding a {
@@ -549,10 +556,339 @@ nav {
 		border:none
 	}
 }
-@media (max-width: 991px) {
-    nav {
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sm-clean ul {
+    position: absolute;
+    width: 12em;
+    }
+    .sm-clean li {
+        float: left;
+    }
+    .sm-clean ul li {
+        float: none;
+    }
+    .sm-clean a {
+        font-size: 14px;
+        white-space: nowrap;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .sm-clean ul a {
+        white-space: normal;
+    }
+    .sm-clean .sm-nowrap > li > a,
+    .sm-clean .sm-nowrap > li >:not(ul) a {
+        white-space: nowrap;
+    }
+
+    /* hide menu button on large screen */
+    .toggle-bttn {
+        display: none
+    }
+    /* ...end */
+    
+    /* main navigation wrapper */
+    #main-nav {
+        width: 100%;
+        line-height: 0;
+        text-align: right;
+        /*border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+        border: none;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;       
+    }
+
+    /* main navigation */    
+    #main-menu {
+        display: inline-block;
+    }
+    #main-nav .search {
+        color: #CCCCCC;
+        padding: 28px 12px;
+    }
+    #main-nav .search:hover {
+        color: #FFFFFF;
+    }
+    .brand-name {
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+        /* apply class on resize to avoid floating of main navigation */    
+    .resize-menu {
+        display: inline-block !important
+    }
+
+    /* style for main menu */    
+    .nav-heading {
+        color: #FFFFFF;
+        border-bottom: solid 1px #444444;
+    }
+    .sm-clean li {
+        border-top: 0;
+    }
+    .sm-clean a {
+        padding: 30px 12px;
+        color: #FFF;
+    }
+
+    .min-padding .sm-clean a {
+        color: #000;
+    }
+
+    .sm-clean a:hover,
+    .sm-clean a:focus,
+    .sm-clean a:active,
+    .sm-clean a.highlighted {
+        color: #FFFFFF;
+    }
+    .sm-clean a.highlighted span.sub-arrow:before {
+        display: none;
+    }
+    .sm-clean a.current {
+        color: #B6E7F1;
+    }
+    .sm-clean a.disabled {
+        color: #bbbbbb;
+    }
+    .sm-clean a.has-submenu {
+        padding-right: 15px;
+    }
+    .sm-clean a span.sub-arrow {
+        top: 50%;
+        margin-top: -4px;
+        right: 12px;
+        width: 6px;
+        height: 6px;
+        background: #CCCCCC;
+        border-radius: 50%;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .sm-clean a:hover span.sub-arrow,
+    .sm-clean a:active span.sub-arrow,
+    .sm-clean a:focus span.sub-arrow,
+    .sm-clean a.highlighted span.sub-arrow {
+        background: #FFFFFF;
+    }
+
+    /* style for sub-menu */    
+    .sm-clean ul {
+        padding: 5px 0;
+        background: #111111;
+        border: solid 1px #222222;
+        box-shadow:0px 0px 60px 0px rgba(0,0,0,0.05)
+    }
+    .sm-clean ul a {
+        color: #CCCCCC
+    }
+    .sm-clean ul a,
+    .sm-clean ul a:hover,
+    .sm-clean ul a:focus,
+    .sm-clean ul a:active,
+    .sm-clean ul a.highlighted {
+        border: 0 !important;
+        padding: 6px 20px;
+    }
+    .sm-clean ul a:hover,
+    .sm-clean ul a:focus,
+    .sm-clean ul a:active,
+    .sm-clean ul a.highlighted {
+        color: #FFFFFF;
+    }
+    .sm-clean ul a.current {
+        color:#a4e9fa;
+        border-left:solid 2px #a4e9fa !important;
+        margin-left:-1px;
+    }
+    .sm-clean ul a.disabled {
+        background: white;
+        color: #cccccc;
+    }
+    .sm-clean ul a.has-submenu {
+        padding-right: 20px;
+    }
+    .sm-clean ul a span.sub-arrow {
+        right: 8px;
+        top: 50%;
+        margin-top: -4px;
+        width: 6px;
+        height: 6px;
+        background: #999999;
+        border-radius: 50%;
+    }
+    .sm-clean ul a:hover span.sub-arrow,
+    .sm-clean ul a:active span.sub-arrow,
+    .sm-clean ul a:focus span.sub-arrow,
+    .sm-clean ul a.highlighted span.sub-arrow {
+        background: #FFFFFF;
+    }
+
+    /* apply class on scroll */    
+    #main-nav.scroll-nav {
         background: #F9F9F9;
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
+    }
+    .scroll-nav a {
+        color: #555555;
+    }
+    .min-padding {
+        /*box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);*/
+        background: #fff;
+    }
+    .min-padding a {
+        padding: 22px 12px;
+    }
+    .scroll-nav a span.sub-arrow {
+        background: #CCCCCC;
+    }
+    .scroll-nav a:hover,
+    .scroll-nav a:focus,
+    .scroll-nav a:active,
+    .scroll-nav a.highlighted {
+        color: #111111;
+    }
+    .scroll-nav a:hover span.sub-arrow,
+    .scroll-nav a:active span.sub-arrow,
+    .scroll-nav a:focus span.sub-arrow,
+    .scroll-nav a.highlighted span.sub-arrow {
+        background: #111111;
+    }
+    .min-padding .brand-name {
+        padding: 0px;
+        margin-top: 15px;
+    }
+    .min-padding .brand-name .scroll-logo {
+        display: block;
+        margin-top: 2px;
+    }
+    .min-padding .brand-name .initial-logo {
+        display: none;
+    }
+    #main-nav.scroll-nav .other-tools {
+        border-left: 1px solid rgba(125, 125, 125, 0.1);
+    }
+    #main-nav.scroll-nav {
+        border-bottom: 1px solid rgba(125, 125, 125, 0.1)
+    }
+    #main-nav.scroll-nav .search {
+        color: #555555;
+    }
+    #main-nav.min-padding .search {
+        padding: 21px 12px;
+    }
+    #main-nav.scroll-nav .search:hover,
+    #main-nav.scroll-nav .shop-cart:hover {
+        color: #afaeae
+    }
+
+    /* scroll arrows for very long sub-menu */    
+    .sm-clean span.scroll-up,
+    .sm-clean span.scroll-down {
+        position: absolute;
+        display: none;
+        visibility: hidden;
+        overflow: hidden;
+        background: white;
+        height: 20px;
+    }
+    .sm-clean span.scroll-up:hover,
+    .sm-clean span.scroll-down:hover {
+        background: #eeeeee;
+    }
+    .sm-clean span.scroll-up:hover span.scroll-up-arrow,
+    .sm-clean span.scroll-up:hover span.scroll-down-arrow {
+        border-color: transparent transparent #d23600 transparent;
+    }
+    .sm-clean span.scroll-down:hover span.scroll-down-arrow {
+        border-color: #d23600 transparent transparent transparent;
+    }
+    .sm-clean span.scroll-up-arrow,
+    .sm-clean span.scroll-down-arrow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -6px;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-width: 6px;
+        border-style: dashed dashed solid dashed;
+        border-color: transparent transparent #555555 transparent;
+    }
+    .sm-clean span.scroll-down-arrow {
+        top: 8px;
+        border-style: solid dashed dashed dashed;
+        border-color: #555555 transparent transparent transparent;
+    }
+    /* navigation types */
+    #main-nav.dark-nav {
+        background:#222222
+    }
+    #main-nav.dark-nav.min-padding {
+        box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.5);
+    }       
+    #main-nav.light-nav {
+        background:#F9F9F9
+    }
+    #main-nav.white-nav {
+        background:#FFFFFF
+    }   
+    .light-nav a, .white-nav a {
+        color: #555555;
+    }
+    .light-nav a span.sub-arrow, .white-nav a span.sub-arrow {
+        background: #CCCCCC;
+    }
+    .light-nav a:hover,
+    .light-nav a:focus,
+    .light-nav a:active,
+    .light-nav a.highlighted,
+    .white-nav a:hover,
+    .white-nav a:focus,
+    .white-nav a:active,
+    .white-nav a.highlighted {
+        color: #111111;
+    }
+    .light-nav a:hover span.sub-arrow,
+    .light-nav a:active span.sub-arrow,
+    .light-nav a:focus span.sub-arrow,
+    .light-nav a.highlighted span.sub-arrow,
+    .white-nav a:hover span.sub-arrow,
+    .white-nav a:active span.sub-arrow,
+    .white-nav a:focus span.sub-arrow,
+    .white-nav a.highlighted span.sub-arrow {
+        background: #111111;
+    }
+    #main-nav.light-nav .other-tools,
+    #main-nav.white-nav .other-tools {
+        border-left: 1px solid rgba(125, 125, 125, 0.1);
+    }
+    #main-nav.light-nav,
+    #main-nav.white-nav {
+        border-bottom: 1px solid rgba(125, 125, 125, 0.1)
+    }
+    #main-nav.light-nav .search,
+    #main-nav.white-nav .search {
+        color: #555555;
+    }
+    #main-nav.light-nav .search:hover,
+    #main-nav.white-nav .search:hover{
+        color: #afaeae
+    }   
+    
+    #main-nav.no-border,
+    #main-nav.no-border .other-tools { 
+        border:none
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    nav {
+        background: #FFF;
+        /*box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);*/
     }
     #main-nav .search {
         padding: 0;
@@ -579,6 +915,7 @@ nav {
     .brand-name .scroll-logo {
         display: block;
     }
+
     .brand-name .initial-logo {
         display: none;
     }
@@ -591,6 +928,19 @@ nav {
         left: 0;
     }
 }
+
+@media (max-width: 480px) {
+    .brand-name .scroll-logo {
+    padding: 1px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .brand-name .initial-logo {
+    padding: 1px 0;
+    }
+}
+
 /* search icon from main navigation */
 .search {
     position: relative;
