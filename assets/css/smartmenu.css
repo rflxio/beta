@@ -174,7 +174,8 @@ nav {
 
 /* for small screen */
 .sm-clean a {
-    padding: 7px 20px;/* make room for the toggle button (sub indicator) */
+    /*padding: 7px 20px;*//* make room for the toggle button (sub indicator) */
+    padding: 15px 5%;
     padding-right: 58px;
     color: #555555;
     font-family: 'ApercuProBold', sans-serif;
@@ -903,8 +904,9 @@ nav {
     .sm-clean {
         background: #FFFFFF;
         padding: 2px 0px;
-        border-bottom: solid 4px #EEEEEE;
-        border-top: solid 4px #EEEEEE
+        border-bottom: solid 4px #FFF;
+        border-bottom: none;
+        border-top: solid 4px #FFF;
     }
     .sm-clean a {
         color: #111111;
