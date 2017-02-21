@@ -280,14 +280,14 @@ nav {
     }
     #main-nav .search {
         color: #CCCCCC;
-        padding: 28px 12px;
+        padding: 23px 12px;
     }
     #main-nav .search:hover {
         color: #FFFFFF;
     }
     .brand-name {
         margin-left: 70px;
-        margin-top: 20px;
+        margin-top: 14px;
     }
 
     /* apply class on resize to avoid floating of main navigation */    
@@ -304,7 +304,7 @@ nav {
         border-top: 0;
     }
     .sm-clean a {
-        padding: 28px 12px;
+        padding: 22px 12px;
         color: #FFF;
     }
 
@@ -322,7 +322,8 @@ nav {
         display: none;
     }
     .sm-clean a.current {
-        color: #B6E7F1;
+        color: #FFF;
+        border-bottom: 2px solid;
     }
     .sm-clean a.disabled {
         color: #bbbbbb;
@@ -450,7 +451,7 @@ nav {
         color: #555555;
     }
     #main-nav.min-padding .search {
-        padding: 21px 12px;
+        padding: 23px 12px;
     }
     #main-nav.scroll-nav .search:hover,
     #main-nav.scroll-nav .shop-cart:hover {
@@ -510,11 +511,26 @@ nav {
 		background:#FFFFFF
 	}	
     .light-nav a, .white-nav a {
-        color: #555555;
+        color: #000;
     }
     .light-nav a span.sub-arrow, .white-nav a span.sub-arrow {
         background: #CCCCCC;
     }
+
+    #main-nav.darkest-nav {
+        background: #222;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }   
+
+    #main-nav.darkest-nav.min-padding .sm-clean a {
+        color: #797979;
+    }
+
+    .darkest-nav-logo {
+        display: block;
+        margin-top: 2px;
+    }
+
 	.light-nav a:hover,
     .light-nav a:focus,
     .light-nav a:active,
@@ -535,22 +551,28 @@ nav {
     .white-nav a.highlighted span.sub-arrow {
         background: #111111;
     }
+/*
     #main-nav.light-nav .other-tools,
 	#main-nav.white-nav .other-tools {
         border-left: 1px solid rgba(125, 125, 125, 0.1);
     }
+*/
+/*
     #main-nav.light-nav,
 	#main-nav.white-nav {
         border-bottom: 1px solid rgba(125, 125, 125, 0.1)
     }
+*/
+/*
     #main-nav.light-nav .search,
 	#main-nav.white-nav .search {
-        color: #555555;
+        color: #000;
     }
     #main-nav.light-nav .search:hover,
 	#main-nav.white-nav .search:hover{
         color: #afaeae
-    }	
+    }
+*/	
 	
 	#main-nav.no-border,
 	#main-nav.no-border .other-tools { 
@@ -606,14 +628,14 @@ nav {
     }
     #main-nav .search {
         color: #CCCCCC;
-        padding: 28px 12px;
+        padding: 23px 12px;
     }
     #main-nav .search:hover {
         color: #FFFFFF;
     }
     .brand-name {
-        margin-left: 5%;
-        margin-top: 20px;
+        margin-left: 70px;
+				margin-top: 14px;
     }
 
         /* apply class on resize to avoid floating of main navigation */    
@@ -630,7 +652,7 @@ nav {
         border-top: 0;
     }
     .sm-clean a {
-        padding: 30px 12px;
+        padding: 22px 12px;
         color: #FFF;
     }
 
@@ -776,7 +798,7 @@ nav {
         color: #555555;
     }
     #main-nav.min-padding .search {
-        padding: 21px 12px;
+        padding: 23px 12px;
     }
     #main-nav.scroll-nav .search:hover,
     #main-nav.scroll-nav .shop-cart:hover {
@@ -836,7 +858,7 @@ nav {
         background:#FFFFFF
     }   
     .light-nav a, .white-nav a {
-        color: #555555;
+        color: #000;
     }
     .light-nav a span.sub-arrow, .white-nav a span.sub-arrow {
         background: #CCCCCC;
@@ -861,22 +883,30 @@ nav {
     .white-nav a.highlighted span.sub-arrow {
         background: #111111;
     }
+/*
     #main-nav.light-nav .other-tools,
     #main-nav.white-nav .other-tools {
         border-left: 1px solid rgba(125, 125, 125, 0.1);
     }
+*/
+/*
     #main-nav.light-nav,
     #main-nav.white-nav {
         border-bottom: 1px solid rgba(125, 125, 125, 0.1)
     }
+*/
+/*
     #main-nav.light-nav .search,
     #main-nav.white-nav .search {
-        color: #555555;
+        color: #000;
     }
+*/
+/*
     #main-nav.light-nav .search:hover,
     #main-nav.white-nav .search:hover{
         color: #afaeae
-    }   
+    }
+*/   
     
     #main-nav.no-border,
     #main-nav.no-border .other-tools { 

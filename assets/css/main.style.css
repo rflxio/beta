@@ -3009,8 +3009,20 @@ blockquote {
 /* General Page Title Style - Simple */
 .page-title-simple {
     min-height: 100px;
-    padding: 80px 0px 50px 0px;
+    padding: 80px 0px 43px 0px;
     border-bottom: solid 1px #DDDDDD
+}
+
+.my-page-title-simple {
+    padding-top: 95px;
+}
+
+.my-page-title-simple h3 {
+    text-transform: none;
+}
+
+.page-title-container {
+    padding-left: 70px;
 }
 
 .col-md-6.col-sm-7 {
@@ -3857,14 +3869,6 @@ blockquote {
 	color: #aaa;
 }
 
-.my-page-title-simple {
-	padding-top: 50px;
-}
-
-.my-page-title-simple h3 {
-	text-transform: none;
-}
-
 .my-left-box {
 	margin: auto 0px;
 	width: 70%;
@@ -4062,10 +4066,6 @@ body img.code-img {
     }   
 }
 
-.chapter {
-    margin-top: 
-}
-
 .faq-heading {
     margin: 40px 0;
 }
@@ -4093,8 +4093,6 @@ body img.code-img {
 .col-md-12.col-sm-12.foo {
     padding-left: 0 !important;
 }
-
-
 
 .support-icn-container {
     width: 60px;
