@@ -987,7 +987,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* Content Block 16 */
 .content-block-16 {
-    background: #222222;
+    /*background: #222222;*/
+    background: #191919;
     overflow: hidden
 }
 .content-block-16 p,
@@ -1173,7 +1174,7 @@ footer a {
 
 /* Footer Style 2 */
 .footer-2 {
-    background: #222222;
+    background: #191919;
     padding: 60px 0px;
     min-height: 100px
 }
@@ -1860,6 +1861,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .after-box p {
 	color: rgba(255,255,255,.9);
+    /*color: #FFF;*/
 }
 
 .right-section {
@@ -1905,7 +1907,7 @@ h3 {
 }
 
 .black-box {
-	background: #222;
+	background: #191919;
 	padding: 0;
 }
 
@@ -3052,7 +3054,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .promo-61 {
-	background: linear-gradient(to right, #ff0000, #ff00ff);
+	background: linear-gradient(to right, #ff00ff, #ff0000);
     /*background: #222222;*/
 }
 

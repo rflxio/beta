@@ -3575,16 +3575,17 @@ blockquote {
 }
 
 .bg-grad {
-	background: linear-gradient(to right, #00ffff, #fe00fe); 
-	color: #000;
+	/*background: linear-gradient(to right, #00ffff, #fe00fe);*/ 
+	color: #fff;
 	display: inline-block;
 	font-family: 'ApercuProBold';
 	font-size: 54px;
 	font-weight: bold;
 	letter-spacing: 1px;
-	line-height: normal;
-	margin-bottom: 20px;
-	padding: 5px 5px 0;
+	/*line-height: normal;*/
+    line-height: normal;
+	margin-bottom: 10px;
+	padding: 5px 200px 0px 80px;
 	text-transform: uppercase;
 }
 
@@ -3632,7 +3633,7 @@ blockquote {
 }
 
 .code-tabs {	
-  background: #111;
+  background: #191919;
 	font-family: 'ApercuProBold';  
 	margin-left: 50px;
 	padding-left: 15px;
