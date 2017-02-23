@@ -3579,11 +3579,11 @@ blockquote {
 	color: #fff;
 	display: inline-block;
 	font-family: 'ApercuProBold';
-	font-size: 54px;
+	font-size: 62px;
 	font-weight: bold;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	/*line-height: normal;*/
-    line-height: normal;
+    line-height: 1.1;
 	margin-bottom: 10px;
 	padding: 5px 200px 0px 80px;
 	text-transform: uppercase;
@@ -3703,9 +3703,10 @@ blockquote {
 }
 
 .section-title {
-	font-size: 70px !important;
+	font-size: 62px !important;
+    letter-spacing: 2px !important;
 	font-weight: bold;
-	line-height: normal;
+	line-height: 1.1;
 	text-transform: uppercase;
     padding: 0 140px 0 0px;
 }
