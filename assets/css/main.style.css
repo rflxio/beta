@@ -1166,8 +1166,8 @@ section {
 
 .bg-cover-simple {
     background-repeat: no-repeat !important;
-    /*background-size: cover !important;*/
-    /*background-position: top center !important;*/
+    background-size: cover !important;
+    background-position: top center !important;
 }
 
 
@@ -3089,7 +3089,7 @@ blockquote {
 /* Simple Page Title Style 2 */
 .page-title-2 {
     /*background: #111111;*/
-    background: #222;
+    background: #191919;
 }
 .page-title-2 .title-nav li a:hover,
 .page-title-2 .title-nav li.current a {
@@ -3583,7 +3583,7 @@ blockquote {
 	font-weight: bold;
 	letter-spacing: 2px;
 	/*line-height: normal;*/
-    line-height: 1.1;
+    line-height: 1.1em;
 	margin-bottom: 10px;
 	padding: 5px 200px 0px 80px;
 	text-transform: uppercase;
@@ -3706,7 +3706,7 @@ blockquote {
 	font-size: 62px !important;
     letter-spacing: 2px !important;
 	font-weight: bold;
-	line-height: 1.1;
+	line-height: 1.1em;
 	text-transform: uppercase;
     padding: 0 140px 0 0px;
 }

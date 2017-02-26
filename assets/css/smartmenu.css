@@ -281,14 +281,14 @@ nav {
     }
     #main-nav .search {
         color: #CCCCCC;
-        padding: 24px 12px;
+        padding: 25px 12px;
     }
     #main-nav .search:hover {
         color: #FFFFFF;
     }
     .brand-name {
         margin-left: 70px;
-        margin-top: 19px;
+        margin-top: 18px;
     }
 
     /* apply class on resize to avoid floating of main navigation */    
@@ -412,6 +412,7 @@ nav {
     }
     .min-padding {
         /*box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);*/
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.07);
         background: #fff;
     }
     .min-padding a {
@@ -434,7 +435,7 @@ nav {
     }
     .min-padding .brand-name {
         padding: 0px;
-        margin-top: 19px;
+        margin-top: 18px;
     }
     .min-padding .brand-name .scroll-logo {
         display: block;
@@ -519,8 +520,13 @@ nav {
     }
 
     #main-nav.darkest-nav {
-        background: #222;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        background: #191919;
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.37);
+    }   
+
+    #main-nav.darkest-nav.min-padding {
+        background: #191919;
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.07);
     }   
 
     #main-nav.darkest-nav.min-padding .sm-clean a {
