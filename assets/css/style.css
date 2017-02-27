@@ -1724,8 +1724,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .relative .promo-6 {
 	position: absolute;
-	left: 90px;
-	right: 90px;
+	left: 70px;
+	right: 70px;
 	top: -192px;
 	width: auto;
 	z-index: 2;
@@ -1733,7 +1733,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (min-width: 991px) {
     .relative .promo-6 {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     }
 }
 
@@ -1913,8 +1913,8 @@ h3 {
 
 .black-box .container {
 	background: #fff;
-	margin: 0 90px;
-	padding: 120px 0 0 0;
+	margin: 0 70px;
+	padding: 120px 20px 0 20px;
 	width: auto;
 }
 

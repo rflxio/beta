@@ -3037,6 +3037,11 @@ blockquote {
     color: #AAAAAA;
 }
 
+.col-md-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 /* Simple Breadcrumbs */
 .page-title-simple .title-nav {
     /*float: right;*/
@@ -3596,7 +3601,7 @@ blockquote {
 }
 
 .pl50 {
-	padding-left: 50px;
+	padding-left: 40px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -4003,7 +4008,7 @@ body img.code-img {
     margin-top: 50px;
     margin-bottom: 120px;
     margin-left: 0 !important;
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
 @media only screen and (max-width: 991px) {
