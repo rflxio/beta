@@ -1,4 +1,4 @@
-@charset "utf-8";
+:@charset "utf-8";
 /* ----------------------------------
 Name: style.css
 Version: 1.1
@@ -1175,7 +1175,7 @@ footer a {
 /* Footer Style 2 */
 .footer-2 {
     background: #191919;
-    padding: 60px 0px;
+    padding: 60px 30px;
     min-height: 100px
 }
 .footer-2 .info {
@@ -1707,8 +1707,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 #main-box {
 	display: table;
-	padding: 0 0 0 70px!important;
+	padding: 0 0 0 70px !important;
 	position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    #main-box {
+    padding: 0 !important;
+    }
 }
 
 #main-box .container {
@@ -1739,24 +1745,32 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (max-width: 991px) {
     .relative .promo-6 {
-    left: 2%;
-    right: 2%;
+    /*left: 2%;
+    right: 2%;*/
+    left: 30px;
+    right: 30px;
     }
 
     .promo-6 .container {
-    padding-left: 3%;
+    /*padding-left: 3%;*/
+    padding-left: 50px;
+    padding-right: 50px;
     }
 }
 
 @media only screen and (min-width: 721px) and (max-width: 768px){
-    .container {
+    /*.container {
     padding-left: 5%;
     padding-right: 5%;
-    }
+    }*/
 
     .col-md-9.blog-single-sidebar {
     padding-left: 0;
     padding-right: 0;
+    }
+
+    .promo-6 .container {
+    padding-right: 50px;
     }
 }
 
@@ -1765,6 +1779,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
     left: 0%;
     right: 0%;
     padding-top: 
+    }
+
+    .promo-6 .container {
+    padding-right: 0px;
     }
 }
 
@@ -1776,6 +1794,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     .promo-6 .container {
     padding-left: 5%;
+    padding-right: 5%;
     }
 }
 
@@ -1865,14 +1884,22 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .right-section {
-	padding-right: 90px;
+	padding-right: 155px;
+    padding-left: 65px;
     margin-bottom: 120px;
 }
 
+@media only screen and (max-width: 1280px) {
+    .right-section {
+    padding-right: 65px;
+    }
+}
+
+
 @media only screen and (max-width: 991px) {
     .right-section {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 80px;
+    padding-left: 80px;
     }
 
     .col-md-6.col-sm-8.col-xs-10.right-section {
@@ -1883,6 +1910,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media only screen and (max-width: 767px) {
     .right-section {
     margin-bottom: 60px;
+    padding-left: 5%;
+    padding-right: 5%;
     }
 }
 
@@ -1950,7 +1979,7 @@ h3 {
 }
 
 .last-section {
-	margin: 0 90px;
+	margin: 0 90px 90px 90px;
 	width: auto;
 }
 

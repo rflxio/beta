@@ -640,8 +640,8 @@ nav {
         color: #FFFFFF;
     }
     .brand-name {
-        margin-left: 70px;
-				margin-top: 14px;
+        margin-left: 30px;
+	    margin-top: 16px;
     }
 
         /* apply class on resize to avoid floating of main navigation */    
@@ -975,7 +975,7 @@ nav {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .brand-name .initial-logo {
-    padding: 1px 0;
+    /*padding: 1px 0;*/
     }
 }
 
