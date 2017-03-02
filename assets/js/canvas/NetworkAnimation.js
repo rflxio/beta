@@ -1,3 +1,9 @@
+var NetworkAnimation = function(){
+  
+};
+
+NetworkAnimation.prototype.setUp = function(parameters){
+  
 var startTime	= Date.now();
 var group;
 var container, controls, stats;
@@ -8,6 +14,9 @@ var particles;
 var pointCloud;
 var particlePositions, particleTo, particleSnapshot , particleIndex;
 var linesMesh;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
 
 var perlinScale3D = 10;
 var perlinScale2D = 2600;
@@ -153,7 +162,7 @@ function initGUI() {
 
 	gui.add(effectController, "rotSpeed", 0, 20, 1 ).onChange(function (value) {
 	  rotSpeed = value;
-	  controls.autoRotateSpeed =effectController.rotSpeed * rotSpeedMul;
+	  //controls.autoRotateSpeed =effectController.rotSpeed * rotSpeedMul;
 	});
 
 	gui.add(effectController, "speed", 0, 5, 0.01 ).onChange(function (value) {
@@ -212,11 +221,11 @@ function init() {
 	stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild( stats.dom );
 
-	container = document.getElementById( 'container' );
+	container = document.getElementById( parameters.container_name || 'container' );
  //424.5773992954919, y: -4232.330461118376, z: 5541.233115473748}
-	camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 10, 200000 );
+	camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 10, 200000 );
 	camera.position.x =		-2978;// 3806;
-	camera.position.y = 	-7641;	//-154;
+	camera.position.y = 	-5641;	//-154;
 	camera.position.z =		857;// 4752;
 //Vector3 {x: -371.8451144237215, y: -5473.898062401281, z: 6139.221810883664}
 	controls = new THREE.OrbitControls( camera, container );
@@ -225,8 +234,9 @@ function init() {
 	controls.rotateSpeed = 1.02;
 	controls.zoomSpeed = 1.25;
 	controls.panSpeed = 1;
-	controls.enableZoom = true;
-	controls.enablePan = true;
+	controls.enableZoom = false;
+	controls.enablePan = false;
+	controls.enableRotate = false;
 	controls.enableDamping = true;
 	controls.dynamicFactor = 1;
 	controls.minDistance = 0;
@@ -234,7 +244,7 @@ function init() {
 	//controls.minPolarAngle = 35 * (Math.PI/180); // radians
 	//controls.maxPolarAngle = 80 * (Math.PI/180); // radians
 	controls.autoRotate = true;
-	controls.autoRotateSpeed =effectController.rotSpeed * rotSpeedMul;
+	controls.autoRotateSpeed = effectController.rotSpeed * rotSpeedMul;
 	controls.target = new THREE.Vector3(-3273,4731,-313);
 
 
@@ -445,15 +455,21 @@ function init() {
 		uniform float clipping_threshold_start;
 
   		void main(){
-  		if (myPos.x > clipping_threshold_start || myPos.x < clipping_threshold_end){
+  		if (myPos.x > clipping_threshold_start|| myPos.x < clipping_threshold_end){
   			discard;
   		}else{
-        	gl_FragColor = vec4( 0.9*(myPos.z+4000.0)*0.0002,
-                           		0.15-(myPos.x+2000.0)*0.0001,
-                            	1.0/distToCamera,
-                            	alpha_);
-  		}
-        	
+  		  if (myPos.y > -1000.0 && myPos.z < 1250.0  && myPos.z > -1200.0 && myPos.x < -1240.0 && myPos.x > -8050.0){
+          	gl_FragColor = vec4(0.5*(myPos.z+3000.0)*0.0002,
+                           		0.8*(myPos.z+4000.0)*0.00025,
+                            	0.9*(myPos.z+4000.0)*0.0015,
+                            	alpha_); 
+  		  }else{
+           gl_FragColor = vec4(0.9*(myPos.z+4000.0)*0.0002,
+                           	0.15-(myPos.x+2000.0)*0.0001,
+                            1.0/distToCamera,
+                            alpha_);	
+  		  };
+  		};  	
 
     }
 	`,
@@ -528,8 +544,13 @@ function init() {
 
 	//
 
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
 	window.addEventListener( 'resize', onWindowResize, false );
+				windowHalfX = container.innerWidth / 2;
+				windowHalfY = container.innerHeight / 2;
 
 	// update the tweens from TWEEN library
 	
@@ -541,11 +562,13 @@ function init() {
 }
 
 function onWindowResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-	var pixelRatio = window.devicePixelRatio || 1;
-  composer.setSize(window.innerWidth * pixelRatio,  window.innerHeight * pixelRatio);
-  renderer.setSize( window.innerWidth, window.innerHeight );
+		var dpr = window.devicePixelRatio;
+		var w = container.clientWidth;
+		var h = container.clientHeight;
+		camera.aspect =  w / h; 
+		camera.updateProjectionMatrix();
+		renderer.setSize( w, h );
+		composer.setSize( w*dpr , h*dpr);
 }
 
 var numOld = 0;  
@@ -666,25 +689,50 @@ function iniciate() {
   		}
   		particlePositions[ i * 3 ] += pushBack;
   	}
-  
+  			//camera.lookAt(  new THREE.Vector3(-5000,4731,0) );
+
 }
+
+var rot = 0;
 
 function animate() {
 	u_time ++;
 	//effectController.minDistance += Math.sin(u_time*0.1)
 	uniforms.time.value = u_time*0.1*effectController.timeAcceleration;
 	alpha_time = Math.pow(Math.sin(u_time*effectController.timeAcceleration),4) ;
-	stats.begin();
+	stats.begin(); 
 	renderer.toneMappingExposure = Math.pow( params.exposure, 4.0 );
-	controls.update();
-    pushCloud();
+	/*
+	 rot = -( rot - mouseX*0.000001);
+	 if (rot > 0.0005){
+	   rot = 0.0005;
+	 }else{
+	   if (rot < -0.0005)
+	   rot = -0.0005;
+	 }
+	*/
+	//controls.update(rot);
+  pushCloud();
 	render();
 	requestAnimationFrame( animate );
 	stats.end();
-	  	linesMesh.geometry.attributes.position.needsUpdate = true;
-  	linesMesh.geometry.attributes.alpha.needsUpdate = true;	  
-}
+    //camera.position.x += ( - mouseX*25 - camera.position.x -3000) * .05;
+		//camera.position.z += ( - mouseY*10 - camera.position.z +7500) * .05;
+		//camera.position.y += ( + Math.abs( mouseY*10) - camera.position.y -8641) * .05;
+    //console.log(mouseY)
 
+	//linesMesh.rotateY(mouseX*0.001 - linesMesh.rotation.y);//  = mouseX*0.001;
+	//pointCloud.rotateY(mouseX*0.001 - pointCloud.rotation.y);
+	//linesMesh.rotation.y = mouseX*0.001;
+	//pointCloud.rotation.y = mouseX*0.001;
+	//linesMesh.rotateX( -Math.PI*0.3 );
+	//pointCloud.rotateX( -Math.PI*0.3);
+	//
+
+}
+	//camera.position.x =		-2978;;
+	//camera.position.y = 	-7641;
+	//camera.position.z =		857;
 function render() {
 	if (effectController.bloom){
 	  renderer.clear();
@@ -696,7 +744,8 @@ function render() {
 		renderer.render( scene, camera );
 	}
 
-
+	linesMesh.geometry.attributes.position.needsUpdate = true;
+  linesMesh.geometry.attributes.alpha.needsUpdate = true;	  
 }
 
 function generateCircleTexture() {
@@ -725,4 +774,28 @@ function generateCircleTexture() {
         }
 
         return canvas;
-      }
+}
+
+
+
+
+
+			function onDocumentMouseMove( event ) {
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+			}
+			function onDocumentTouchStart( event ) {
+				if ( event.touches.length === 1 ) {
+					event.preventDefault();
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+			function onDocumentTouchMove( event ) {
+				if ( event.touches.length === 1 ) {
+					event.preventDefault();
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+}

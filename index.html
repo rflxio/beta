@@ -31,7 +31,15 @@
         <!-- Scripts 
             ============================================= -->
         <script src="assets/js/modernizr.js"></script>
+        
         <!--CANVAS GOES HERE-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r80/three.js"></script>
+        <script src="assets/js/canvas/SimplexNoise.js"></script>
+        <script src="assets/js/canvas/OrbitControls.js"></script>
+        <script src="assets/js/canvas/Detector.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js"></script>
     </head>
     
     <!-- Main body tag content goes here
@@ -52,7 +60,23 @@
             ============================================= -->
         <main id="top">
             <!-- Hero Header Style 6 -->
-            <section class="hero-header-6 bg-cover-simple" id="main-box" data-js="main">
+                <script>
+                var rotSpeedMul= -1;
+                </script> 
+                <div id="network-animation-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">  
+                                <div class="text-dark-grey font-hind text-large margin-top20" style="position: absolute; padding: 20% 0;">
+                                <span class="bg-grad" style="padding-left: 0;">An offline-first approach to reinvent your client-server architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Hero Header Style 6 -->
+            <!--<section class="hero-header-6 bg-cover-simple" id="main-box" data-js="main">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">                            
@@ -62,7 +86,7 @@
                         </div>                        
                     </div>
                 </div>
-            </section>
+            </section>-->
             
             <!-- Content Block 11 -->
             <section class="section-padding before-box">
@@ -724,6 +748,7 @@ Due to the system of permissions user receives only necessary data while other (
         <script src="assets/js/project.js"></script>
 
         <!--CANVAS GOES HERE-->
+        <script src="assets/js/canvas/stats.min.js"></script>
         <script src="https://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
         <script src="https://threejs.org/examples/js/postprocessing/RenderPass.js"></script>
         <script src="https://threejs.org/examples/js/postprocessing/MaskPass.js"></script>
@@ -733,7 +758,8 @@ Due to the system of permissions user receives only necessary data while other (
         <script src="https://threejs.org/examples/js/shaders/ConvolutionShader.js"></script>
         <script src="https://threejs.org/examples/js/shaders/LuminosityHighPassShader.js"></script>
         <script src="https://threejs.org/examples/js/postprocessing/UnrealBloomPass.js"></script>
-        <script href="/assets/js/canvas/script.js"></script>
+        <script src="assets/js/canvas/animation_loader.js"></script>
+        <script src="assets/js/canvas/NetworkAnimation.js"></script>
         
         <!-- page-wise script initialization -->
         <script>

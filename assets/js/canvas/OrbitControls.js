@@ -123,7 +123,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 		var lastPosition = new THREE.Vector3();
 		var lastQuaternion = new THREE.Quaternion();
 
-		return function update () {
+		return function update (rotationAngle) {
 
 			var position = scope.object.position;
 
@@ -134,9 +134,9 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 			// angle from z-axis around y-axis
 			spherical.setFromVector3( offset );
-
-			if ( scope.autoRotate && state === STATE.NONE ) {
-				rotateLeft( getAutoRotationAngle() );
+ 
+			if ( scope.autoRotate && state === STATE.NONE || rotationAngle) {
+				rotateLeft( rotationAngle || getAutoRotationAngle() );
 			}
 
 			spherical.theta += sphericalDelta.theta;
