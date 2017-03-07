@@ -19,5 +19,4 @@ var animation_load = function(){
     }
     var networkAnimation = new NetworkAnimation();
     networkAnimation.setUp(parameters);
-  
 }
