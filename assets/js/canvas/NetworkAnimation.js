@@ -228,9 +228,9 @@ function init() {
 	document.body.appendChild( stats.dom );
 
 	container = document.getElementById( parameters.container_name || 'container' );
-	camera = new THREE.PerspectiveCamera( 34, window.innerWidth / window.innerHeight, 10, 200000 );
+	camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 10, 200000 );
 	camera.position.x =		-2978;
-	camera.position.y = 	-5641;
+	camera.position.y = 	-4841;
 	camera.position.z =		857;
 	controls = new THREE.OrbitControls( camera, container );
 
@@ -400,6 +400,7 @@ void main()
 	  transparent: true,
 		uniforms : uniforms,
 		blending : THREE.NormalBlending,
+		depthTest: effectController.depthTest
 		//blendEquation : THREE.AddEquation,
 		//blending : THREE.CustomBlending,
 		//blendSrc : THREE.SrcAlphaFactor,
