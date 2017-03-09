@@ -1,10 +1,16 @@
 /* Styles go here */
 
 .dg.main {
-  display: none;
+  display: block;
 }
 
 .dg.ac {
     position: absolute;
     z-index: 10 !important;
+}
+
+.dg .cr.number input[type=text] {
+    color: #2fa1d6;
+    font-family: 'Helvetica';
+    font-size: 12px;
 }

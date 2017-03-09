@@ -45,8 +45,8 @@ var params = {
 				projection: 'normal',
 				background: 	false,
 				exposure: 		0.0,
-				bloomStrength: 	0.7,
-				bloomThreshold: 0.16,
+				bloomStrength: 	0.8,
+				bloomThreshold: 0.15,
 				bloomRadius: 	1.0,
 				clipping_start: -580,
 				clipping_end :  -5500,
@@ -59,20 +59,20 @@ var params = {
 var effectController = {
 	factor: factor,
 	epsilon: epsilon,
-	bloom : true,
+	bloom: true,
 	showDots: true,
 	showLines: true, 
-	minDistance: 690,
-	minDistanceDissociation: 500,
-	minDistanceDissociationTime : 0.04,
-	timeAcceleration : 1,
-	pulseStrength : 0.05,
+	minDistance: 750,
+	bloomDiss: 2.4,
+	bloomDissTime: 0.04,
+	timeAcceleration: 1,
+	pulseStrength: 0.005,
 	particleCount: particleCount,
 	maxConnections: 52,
 	limitConnections: true,
 	rotSpeed: 0.0,
-	speed: 0.26,
-	depthTest : false
+	speed: 0.28,
+	depthTest: false
 };
  
 
@@ -101,11 +101,11 @@ init();
 function initGUI() {
 	var gui = new dat.GUI();
 
-	gui.add( params, 'clipping_end', -20000,20000  ).onChange( function(value) {
+	gui.add( params, 'clipping_end', -8000,8000  ).onChange( function(value) {
 		  uniforms.clipping_threshold_end.value =Number(value);
 	});
 
-	gui.add( params, 'clipping_start', -20000,20000  ).onChange( function(value) {
+	gui.add( params, 'clipping_start', -8000,8000  ).onChange( function(value) {
 		uniforms.clipping_threshold_start.value = Number(value);
 	});
 
@@ -118,7 +118,7 @@ function initGUI() {
 	});
 
 	gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function(value) {
-		bloomPass.strength = Number(value);
+		bloomPass.strength = Number(value); 
 	});
 
 	gui.add( params, 'bloomRadius', 0.0, 1.0 ).onChange( function(value) {
@@ -134,10 +134,10 @@ function initGUI() {
 		gui.add(effectController, "minDistance", 10, 300 * perlinScale3D).onChange(function (value) {
     	//pushCloud();
 	});
-		gui.add(effectController, "minDistanceDissociation", 10, 300 * perlinScale3D).onChange(function (value) {
+		gui.add(effectController, "bloomDiss", 0.1, 5 * perlinScale3D).onChange(function (value) {
     	//pushCloud();
 	});
-		gui.add(effectController, "minDistanceDissociationTime", 0, 1.5,0.01).onChange(function (value) {
+		gui.add(effectController, "bloomDissTime", 0, 1.5,0.01).onChange(function (value) {
     	//pushCloud();
 	});
 
@@ -228,7 +228,7 @@ function init() {
 	document.body.appendChild( stats.dom );
 
 	container = document.getElementById( parameters.container_name || 'container' );
-	camera = new THREE.PerspectiveCamera( 38, window.innerWidth / window.innerHeight, 10, 200000 );
+	camera = new THREE.PerspectiveCamera( 34, window.innerWidth / window.innerHeight, 10, 200000 );
 	camera.position.x =		-2978;
 	camera.position.y = 	-5641;
 	camera.position.z =		857;
@@ -487,10 +487,7 @@ function pushCloud() {
   	var vertexpos = 0;
   	var colorpos = 0;
   	var numConnected = 0;
-  	console.log(Math.abs(1-(u_time*effectController.minDistanceDissociationTime) % 2))
-  	var minDist = Math.pow(effectController.minDistance+
-  	  Math.abs(1-(u_time*effectController.minDistanceDissociationTime) % 2)
-  	  *effectController.minDistanceDissociation,2);
+  	var minDist = Math.pow(effectController.minDistance,2);
   	var i = particleCount;
   	while(i--) {
   		
@@ -558,7 +555,7 @@ function pushCloud() {
 
 }
 
-
+ 
 function iniciate() {
 
   	var i = particleCount;
@@ -583,6 +580,12 @@ function animate() {
   stats.begin(); 
 	u_time ++;
 	uniforms.time.value = Math.sin(u_time*0.1*effectController.timeAcceleration)*effectController.pulseStrength;
+  bloomPass.strength =params.bloomStrength +
+  	 Math.abs(1-(u_time*effectController.bloomDissTime) % 2)
+
+  	  *effectController.bloomDiss
+  
+  
   
   pushCloud();
 	render();
