@@ -39,8 +39,7 @@
         <script src="assets/js/canvas/SimplexNoise.js"></script>
         <script src="assets/js/canvas/OrbitControls.js"></script>
         <script src="assets/js/canvas/Detector.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js"></script>-->
     </head>
     
     <!-- Main body tag content goes here
@@ -64,12 +63,16 @@
                 <script>
                 var rotSpeedMul= -1;
                 </script> 
-                <div id="network-animation-container">
+                <div id="network-animation-container" style="display:none;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">  
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: -1px;">  
                                 <div class="text-dark-grey font-hind text-large margin-top20" style="position: absolute; padding: 20% 0;">
                                 <span class="bg-grad" style="padding-left: 0;">An offline-first approach to reinvent your client-server architecture</span>
+                                <!-- button -->
+                                <section class="canvas-promo-6">
+                                            <a class="bttn bttn-large bttn-scale bttn75 margin-top20 letter-spacing2">GET STARTED</a>
+                                </section>
                                 </div>
                             </div>
                         </div>
@@ -97,18 +100,18 @@
                     <!-- main wrapper -->
                     <div class="all-details-wrapper row">
                         <!-- feature -->
-                        <div class="col-md-4 col-sm-6 col-xs-8 feature my-article">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8 feature my-article">
                             <h3 class="font-w600 article-title"><sup class="sup">1</sup>Make more by doing less</h3>
                             <!-- feature info -->
                             <p class="feature-info">Reflex saves you huge amount of work by providing a ready to use interface.<br><br> Forget about creating lots of queries to receive a data from server. Reflex creates a snapshot of all necessary data on a client side, so all you need for productive work is already here.</p>
                         </div>
                         <!-- feature -->
-                        <div class="col-md-4 col-sm-6 col-xs-8 feature my-article">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8 feature my-article">
                             <h3 class="font-w600 article-title"><sup class="sup">2</sup>When everything works offline</h3>
                             <p class="feature-info">Practically any application can be made offline first using Reflex methodology.<br><br> Due to the multiversion nature of data in Reflex you can safely delegate the resolution of conflicts to users and keep all of the further changes fresh.</p>
                         </div>
                         <!-- feature -->
-                        <div class="col-md-4 col-sm-6 col-xs-8 feature my-article">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8 feature my-article">
                             <h3 class="font-w600 article-title"><sup class="sup">3</sup>And everyone is invited</h3>
                             <p class="feature-info">Reflex was built technology-agnostic, meaning that it is friendly to any language, platform or database.<br><br> The original implementation is created for SQL and fully compatible with ACID, so it is easy and comfortable to integrate Reflex with all types of databases.</p>
                         </div>
@@ -219,12 +222,13 @@ Due to the system of permissions user receives only necessary data while other (
                         <!-- image wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10">
 	                        	<!-- Main heading -->
-                            <h3 class="text-white pl50">Client-side storage</h3>
+                            <!--<h3 class="text-white pl50">Client-side storage</h3>-->
                             <img class="img-center section-image my-img" src="assets/img/client-side-storage.svg" alt="">
                         </div>
                         <!-- content wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10 right-section">                            
                             <!-- main text -->
+                            <h3 class="text-white" style="margin-bottom: 32px;">Client-side storage</h3>
                             <p class="text-extra-large font-hind">Applications built with Reflex are using the data stored on the client side (for web-applications they use technologies like IndexedDB / WebSQL).</p>
                             <p class="text-extra-large margin-top20 font-hind">Providing the local storage of all necessary data, Reflex makes it possible to fully interact with the application even if the connection with server breaks.</p>
                             <p class="text-extra-large margin-top20 font-hind">This also allows to reduce the volume of data flowing inside the network. The main part of data is sent to the client with the very first launch of application, and subsequently the new data are being kept fresh.</p>
@@ -240,12 +244,13 @@ Due to the system of permissions user receives only necessary data while other (
                         <!-- image wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10">
 	                        <!-- Main heading -->
-                            <h3 class="pl50">Multiversion data</h3>
+                            <!--<h3 class="pl50">Multiversion data</h3>-->
                             <img class="img-center section-image my-img" src="assets/img/multiversion-data.svg" alt="">
                         </div>
                         <!-- content wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10 right-section">                            
                             <!-- main text -->
+                            <h3 style="margin-bottom: 32px;">Multiversion Data</h3>
                             <p class="text-extra-large font-hind">Multiversion data is the heart of Reflex. Having the ability to save all versions of one piece of data simultaneously, you can safely edit and save data being offline.</p>
                             <p class="text-extra-large margin-top20 font-hind">Any of your edits won’t delete the previous changes made by other user when they are unavailable at the moment because of a broken connection.</p>
                             <p class="text-extra-large margin-top20 font-hind">Reflex will save all versions of data, whereupon it will be possible to delegate the resolution of conflicts to the application or its users. For such resolution you will only have to provide a user with simple UI, allowing him or her to choose a right version of data independently.</p>
@@ -261,11 +266,12 @@ Due to the system of permissions user receives only necessary data while other (
                         <!-- image wrapper -->
                         <div class="col-md-6 col-sm-8 col-xs-10">
 	                        <!-- Main heading -->
-                            <h3 class="text-white pl50">Interactivity</h3>
+                            <!--<h3 class="text-white pl50">Interactivity</h3>-->
                             <img class="img-center section-image my-img" src="assets/img/interactivity.svg" alt="">
                         </div>
                         <!-- content wrapper -->
-                        <div class="col-md-6 col-sm-8 col-xs-10 right-section">                                                        
+                        <div class="col-md-6 col-sm-8 col-xs-10 right-section">
+                        <h3 class="text-white" style="margin-bottom: 32px;">Interactivity</h3>                                                        
                             <!-- Tabs Navigation -->
 		                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 		                            <li class="active"><a href="#ultra" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">Ultra</a></li>
@@ -447,7 +453,7 @@ Due to the system of permissions user receives only necessary data while other (
                             <p class="text-extra-large margin-top20 font-hind">После того как схема готова можно создать репозиторий</p>
                             <p class="text-extra-large margin-top20 font-hind">Но этот репозиторий еще пока пуст, давайте создадим данные для этого репозитория:</p>
                             <p class="text-extra-large margin-top20 font-hind">Данные изображенные на этом рисунке в таком виде при использовании Reflex не придется создавать в ручную обычно такие данные будут передаваться сервером на клиент автоматически но для явности давайте рассмотрим из каких элементов состоят эти данные.</p>
-                            <ol id="e1">
+                            <ul id="e1">
                                 <li>Первое на что стоит обратить внимание что переменная в которую ложится этот массив называется diff. Причиной тому есть специальный формат обмена данными между репозиториями который был назван diff по аналогии c diff’ом репозитория GIT этот формат имеет такую же природу как и обычный diff и при его помощи реализуются операции слияния, пересечения, суммы и минуса множеств данных о которых более детальный разговор пойдет далее</li>
                                 <li>Второе на что стоит обратить внимание что diff это массив, важно осознавать что от порядка находящемся в этом массиве данных в особых случаях может меняться результат операций над множествами данных, о чем более детально будет написано позже</li>
                                 <li>Элементы массива назвем Record’ами, это сервисные сущности используемые для переноса данных между репозиториями либо базой</li>
@@ -456,12 +462,9 @@ Due to the system of permissions user receives only necessary data while other (
                                 <li>Поле vid - расшифровывается как Version ID, для клиентской библиотеки Reflex - rid может быть так-же любой строкой</li>
                                 <li>Поле pid - расшифровывается как Permission ID, это разрешение при помощи которого сервер понимает можно ли текущему пользователю отправлять текущее данное или нет, более детально вопросы сервера и разрешений мы будем обсуждать позже</li>
                                 <li>Поле proto - содержит контейнер с данными в разобранной форме, что означает что ссылки на сущности в этой форме представлены строками
-                                    <ol class="my-list">
-                                        <li>Обратите так-же внимание что для первых двух record’ов поле “proto.country” ссылается на rid соответствующей сущности</li>
-                                    </ol>
                                 </li>
                                 <li>Поле table - содержит информацию о том к какой таблице данных относится текущая сущность</li>
-                            </ol>
+                            </ul>
                             <p class="text-extra-large margin-top20 font-hind">Далее давайте добавим описанные данные в репозиторий</p>
                             <p class="text-extra-large margin-top20 font-hind">Операция merge возвращает формат diff аналогичный по типу к входной переменной однако обратный по отношению к переменной diff который попадает в переменную out, таким образом если вызвать</p>
                             <p class="text-extra-large margin-top20 font-hind">то такой вызов переведет репозиторий в исходное состояние.</p>
@@ -480,32 +483,194 @@ Due to the system of permissions user receives only necessary data while other (
                                 <!-- Tabs Content -->
                                 <div id="my-tab-content" class="tab-content code-tab-content">
                                     <div class="tab-pane active" id="ts">
-                                    <pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
-<span>{</span>
-    @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
-    <span class="hljs-keyword">public</span> <span class="hljs-id">Employees</span>: <span class="hljs-keyword">Map</span><<span class="hljs-keyword"><span class="hljs-built_in">string</span></span>, <span class="hljs-keyword"><span class="hljs-built_in">Employer</span></span>>;
+                                    <pre class="snippet"><code class="js hljs javascript">
+class Schema
+{
+    @Table(Employee, "Employee")
+    public Employees: Map<string, Employer>;
 
-    @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
-    <span class="hljs-keyword">public</span> <span class="hljs-id">Employees</span>: <span class="hljs-keyword">Map</span><<span class="hljs-keyword"><span class="hljs-built_in">string</span></span>, <span class="hljs-keyword"><span class="hljs-built_in">Employer</span></span>>;
+    @Table(Employee, "Employee")
+    public Employees: Map<string, Employer>;
 });
 
-<span class="hljs-keyword">class</span> <span class="hljs-keyword">Bob </span>{ }
-<span class="hljs-keyword">class</span> <span class="hljs-keyword">Alice </span>{ }
-<span class="hljs-keyword">class</span> <span class="hljs-keyword">Repository</span><<span class="hljs-keyword">TSchema</span>>
-<span>{</span>    
-    <span class="hljs-keyword">public</span> <span class="hljs-id">tables</span>: <span class="hljs-keyword"><span class="hljs-built_in">TSchema</span></span>;
-    <span class="hljs-keyword">public</span> versions(<span class="hljs-id">obj</span>: <span class="hljs-keyword"><span class="hljs-built_in">any</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: any</span></span>{ <span class="hljs-number">return </span><span class="hljs-keyword">null</span>; }
-    <span class="hljs-keyword">public</span> merge(<span class="hljs-id">schema</span>: <span class="hljs-keyword"><span class="hljs-built_in">TSchema</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: void </span></span>{ }
-    <span class="hljs-keyword">public</span> clone(<span class="hljs-id">x</span>: <span class="hljs-keyword"><span class="hljs-built_in">any</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: any</span></span>{ <span class="hljs-number">return </span><span class="hljs-keyword">null</span>; }
-    <span class="hljs-keyword">public</span> markDeleted(<span class="hljs-id">x</span>: <span class="hljs-keyword"><span class="hljs-built_in">any</span></span>)<span class="hljs-keyword"><span class="hljs-built_in">: void </span></span>{ }
-    <span class="hljs-keyword">public</span> diff()<span class="hljs-keyword"><span class="hljs-built_in">: any </span></span>{ <span class="hljs-number">return </span><span class="hljs-keyword">null</span>; }
-}</code></pre>                                      
+class Bob { }
+class Alice { }
+class Repository<TSchema>
+{    
+    public tables: TSchema;
+    public versions(obj: any): any{ return null; }
+    public merge(schema: TSchema): void { }
+    public clone(x: any): any{ return null; }
+    public markDeleted(x: any): void { }
+    public diff(): any { return null; }
+}
+                                      
+                                      </code></pre>
                                                                 </div>
                                     <div class="tab-pane" id="html">
-                                        
+                                        <pre class="snippet">
+<code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-selector-tag">body</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>&gt;</span><span class="javascript">
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$init</span>(<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code>                                     
+                                      </pre>
                                     </div>
                                     <div class="tab-pane" id="css">
-                                        
+                                        <pre class="snippet"><code class="css hljs javascript">
+
+/* Master Styles */
+h1 {
+  color: #369; 
+  font-family: Arial, Helvetica, sans-serif;   
+  font-size: 250%;
+}
+h2, h3 { 
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-weight: lighter;
+}
+body { 
+  margin: 2em; 
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.router-link-active {
+  color: #039be5;
+}
+
+/* items class */
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+
+.items li.selected:hover {
+  background-color: #BBD8DC;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+/* everywhere else */
+* { 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+</code></pre>
                                     </div>
                                     <div class="tab-pane" id="backend">
                                         
@@ -514,15 +679,15 @@ Due to the system of permissions user receives only necessary data while other (
                                 </div>
                                 
                                 <div class="code-box" id="code-box-2">
-                                <ul id="tabs" class="nav nav-tabs code-tabs" data-tabs="tabs">
-                                    <li class="active"><a href="#ts" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
-                                    <li class=""><a href="#html" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
-                                    <li class=""><a href="#css" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
-                                    <li class=""><a href="#backend" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
+                                <ul id="tabs-2" class="nav nav-tabs code-tabs" data-tabs="tabs">
+                                    <li class="active"><a href="#ts-2" class="nav-tabs-item" data-toggle="tab" aria-expanded="true">TS</a></li>
+                                    <li class=""><a href="#html-2" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">HTML</a></li>
+                                    <li class=""><a href="#css-2" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">CSS</a></li>
+                                    <li class=""><a href="#backend-2" class="nav-tabs-item" data-toggle="tab" aria-expanded="false">BACKEND</a></li>
                                 </ul>
                                 <!-- Tabs Content -->
                                 <div id="my-tab-content" class="tab-content code-tab-content">
-                                    <div class="tab-pane active" id="ts">
+                                    <div class="tab-pane active" id="ts-2">
                                     <pre class="snippet"><code class="js hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-keyword">Schema</span>
 <span>{</span>
     @Table(<span class="hljs-function"><span class="hljs-id">Employee</span>, <span class="hljs-string">"Employee"</span></span>)
@@ -542,13 +707,13 @@ Due to the system of permissions user receives only necessary data while other (
 });
 </code></pre>                                   
                                                                 </div>
-                                    <div class="tab-pane" id="html">
+                                    <div class="tab-pane" id="html-2">
                                         
                                     </div>
-                                    <div class="tab-pane" id="css">
+                                    <div class="tab-pane" id="css-2">
                                         
                                     </div>
-                                    <div class="tab-pane" id="backend">
+                                    <div class="tab-pane" id="backend-2">
                                         
                                     </div>
                                                             </div>

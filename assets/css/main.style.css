@@ -538,12 +538,18 @@ section {
     padding: 120px 0;
 }
 .section-padding-small {
-    padding: 60px 0;
+    padding: 70px 0;
 }
 .section-padding-bottom-zero {
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
+    padding-bottom: 0px;
 }
 
+@media only screen and (min-width: 992px) {
+    .section-padding-small {
+        padding: 70px 30px 60px 30px;
+    }
+}
 @media only screen and (max-width: 991px) {
     .section-padding {
         padding: 100px 0;
@@ -673,6 +679,14 @@ section {
 .all-details-wrapper-lg {
     margin-top: 100px;
 }
+@media only screen and (max-width: 1170px) {
+    .all-details-wrapper {
+        max-width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .all-details-wrapper {
         /*margin-top: 20px; */
@@ -2361,6 +2375,8 @@ figcaption .project {
 	background: transparent;
 	border: 0;
 	border-radius: 0;
+	height: 100%;
+	margin-bottom: 0;
 	overflow: hidden;
 	position: relative;
 	padding: 40px 20px 60px;
@@ -2395,8 +2411,7 @@ figcaption .project {
     .nav-tabs > li {
         display: block;
         float: left;
-        margin-right: 20px;
-        margin-bottom: 5px
+        margin-right: 10px;        
     }
     .nav-tabs > li > a {
         display: block;
@@ -2411,14 +2426,10 @@ figcaption .project {
     .nav-tabs > li.active > a:hover,
     .nav-tabs > li.active > a:focus {
         border: none
-    }
-    .nav-tabs > li > a:hover {
-        background: #EEEEEE
-    }
+    }    
     .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:hover,
     .nav-tabs > li.active > a:focus {
-        background: none;
         color: #71a9fd;
         border-bottom: 2px solid #71a9fd;
     }
@@ -3669,6 +3680,12 @@ blockquote {
 	padding-left: 15px;
 }
 
+@media only screen and (max-width: 1024px) {
+	.code-tabs, .code-tab-content {
+		margin-left: 0;
+	}
+}
+
 .code-tabs .active {
 	background: #222;
 }
@@ -3680,6 +3697,12 @@ blockquote {
 	padding-bottom: 10px;
 	text-decoration: none !important;
 	transition: none;
+}
+
+@media only screen and (max-width: 480px) {
+	.code-tabs .nav-tabs-item {
+		margin: 0 5px;
+	}
 }
 
 .code-tabs .active .nav-tabs-item {
@@ -3914,6 +3937,15 @@ blockquote {
 	width: 70%;
 }
 
+#my-tab-content.tab-content.code-tab-content > .tab-pane {
+	height: 500px;
+	overflow-y: auto;
+}
+
+#my-tab-content.tab-content > .tab-pane code {
+	height: 100%;
+}
+
 @media only screen and (max-width: 991px) {
     .my-left-box {
     margin: auto;
@@ -4037,11 +4069,11 @@ body img.code-img {
 }
 
 .my-img {
-	width: 83%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+	width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
     margin-left: 0 !important;
-    padding-left: 40px;
+    padding-left: 15px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -4050,6 +4082,8 @@ body img.code-img {
     /*margin-left: auto !important;*/
     margin-left: 65px !important;
     margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding-left: 0;
     }
 }

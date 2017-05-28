@@ -1,10 +1,12 @@
 /* Styles go here */
 
 .dg.main {
-  display: block;
+  /*display: block;*/
+  display: none;
 }
 
 .dg.ac {
+	display: none;
     position: absolute;
     z-index: 10 !important;
 }

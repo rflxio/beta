@@ -463,6 +463,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .faq .content-block-4 .container {
+    padding: 0 70px;
+    }
+}
 
 /* Content Block 5 */
 .content-block-5 {
@@ -988,7 +993,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Content Block 16 */
 .content-block-16 {
     /*background: #222222;*/
-    background: #191919;
+    background: #121212;
     overflow: hidden
 }
 .content-block-16 p,
@@ -1174,7 +1179,7 @@ footer a {
 
 /* Footer Style 2 */
 .footer-2 {
-    background: #191919;
+    background: #121212;
     padding: 60px 30px;
     min-height: 100px
 }
@@ -1336,7 +1341,7 @@ footer a {
     margin-right: 10px;
     display: inline-block;
     text-align: center;
-    background: #111111;
+    background: #11111;
     width: 30px;
     height: 30px;
     padding-top: 9px;
@@ -1737,23 +1742,43 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	z-index: 2;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (max-width: 1024px) {
     .relative .promo-6 {
-    /*padding-left: 20px;*/
+    left: 0;
+    right: 0;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .relative .promo-6 {
-    /*left: 2%;
-    right: 2%;*/
+    padding-left: 55px;
     left: 30px;
     right: 30px;
     }
+}
 
+@media only screen and (max-width: 768px) {
+	.relative .promo-6 {
+		position: static;
+	}
+	
+	.section-padding.before-box {
+		padding-bottom: 0;
+	}
+	
+	.section-padding-bottom-zero {
+		padding-top: 0;
+	}
+	
+	.container.after-box {
+		padding-top: 80px !important;
+	}
+}
+
+@media only screen and (max-width: 991px) {
     .promo-6 .container {
     /*padding-left: 3%;*/
-    padding-left: 50px;
+    padding-left: 25px;
     padding-right: 50px;
     }
 }
@@ -1834,12 +1859,16 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	padding-top: 200px;
 	width: auto;
     }
+
+@media only screen and (min-width: 1200px) {
+    .after-box {
+    padding-top: 200px !important;
+    }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     .after-box {
-    margin: 0;
-    padding-top: 280px !important;
+    padding-top: 290px !important;
     }
 }
 
@@ -1884,7 +1913,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .right-section {
-	padding-right: 155px;
+	padding-right: 75px;
     padding-left: 65px;
     margin-bottom: 120px;
 }
@@ -1936,7 +1965,7 @@ h3 {
 }
 
 .black-box {
-	background: #191919;
+	background: #121212;
 	padding: 0;
 }
 
@@ -1979,7 +2008,7 @@ h3 {
 }
 
 .last-section {
-	margin: 0 90px 90px 90px;
+	margin: 0 90px 70px 90px;
 	width: auto;
 }
 
@@ -3109,6 +3138,16 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-family: "ApercuProBold";
 }
 
+.canvas-promo-6 .bttn {
+    /*background: linear-gradient(to right, #04fcfe, #fa40fd);*/
+    color: #FFFFFF;
+    font-family: "ApercuProBold";
+    font-size: 20px;
+    background: none;
+    padding: 20px 38px 16px 38px;
+    /*border: 1px solid #ae7afd;*/
+    border: 1px solid;
+}
 
 /* ---------------------------------
 08. Sign In Styles
