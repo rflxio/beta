@@ -3612,6 +3612,15 @@ blockquote {
 	font-size: 14px;
 }
 
+@media only screen and (max-width: 991px) {
+    .sup {
+    left: -15px;
+    }
+    .feature.my-article {
+    padding-left: 0px !important;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .sup {
     position: relative;
